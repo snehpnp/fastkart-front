@@ -1,7 +1,7 @@
 
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
-
+import Footer from './Components/Footer/Footer'
 
 
 // File Import
@@ -22,8 +22,8 @@ function App() {
   return (
    <>
  <Header/>
- {/* <Home /> */}
-
+ <Home />
+<Footer/>
    </>
   );
 }

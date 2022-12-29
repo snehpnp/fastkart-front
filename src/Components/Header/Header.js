@@ -13,13 +13,12 @@ import logo1 from '../../assets/images/logo/1.png'
 
 
 
-import '../../assets/css/vendors/feather-icon.css'
 
 function Header() {
     return (
         <>
             {/* <!-- Loader Start --> */}
-            {/* <div class="fullpage-loader">
+            {/* <div className="fullpage-loader">
         <span></span>
         <span></span>
         <span></span>
@@ -128,25 +127,25 @@ function Header() {
                                         </span>
                                     </button>
                                     <a href="index.html" className="web-logo nav-logo">
-                                        <img src={logo1} className="img-fluid  lazyload" alt="Fast Cart"  />
+                                        <img src={logo1} className="img-fluid  lazyload" alt="Fast Cart" />
                                     </a>
                                     <div className="middle-box">
                                         <div className="location-box">
                                             <button className="btn location-button" data-bs-toggle="modal" data-bs-target="#locationModal">
                                                 <span className="location-arrow">
-                                                    <i data-feather="map-pin" />
-                                                    <i class="fa-solid fa-location-dot"></i>
+                                                <i className="fa-light fa-location-dot"></i>
+
                                                 </span>
                                                 <span className="locat-name">Your Location</span>
-                                                <i className="fa-solid fa-angle-down" />
+                                             
                                             </button>
                                         </div>
                                         <div className="search-box">
                                             <div className="input-group">
                                                 <input type="search" className="form-control" placeholder="I'm searching for..." aria-label="Recipient's username" aria-describedby="button-addon2" />
                                                 <button className="btn" type="button" id="button-addon2">
-                                                <i class="fa-solid fa-magnifying-glass"></i>
-                                                  
+                                                    <i className="fa-solid fa-magnifying-glass"></i>
+
                                                 </button>
                                             </div>
                                         </div>
@@ -176,7 +175,7 @@ function Header() {
                                             <li className="right-side">
                                                 <a href="contact-us.html" className="delivery-login-box">
                                                     <div className="delivery-icon">
-                                                        <i data-feather="phone-call" />
+                                                    <i className="fa-solid fa-phone-volume"></i>
                                                     </div>
                                                     <div className="delivery-detail">
                                                         <h6>24/7 Delivery</h6>
@@ -186,13 +185,13 @@ function Header() {
                                             </li>
                                             <li className="right-side">
                                                 <a href="wishlist.html" className="btn p-0 position-relative header-wishlist">
-                                                    <i data-feather="heart" />
+                                                <i className="fa-thin fa-heart"></i>
                                                 </a>
                                             </li>
                                             <li className="right-side">
                                                 <div className="onhover-dropdown header-badge">
                                                     <button type="button" className="btn p-0 position-relative header-wishlist">
-                                                        <i data-feather="shopping-cart" />
+                                                    <i className="fa-light fa-cart-shopping"></i>
                                                         <span className="position-absolute top-0 start-100 translate-middle badge">2
                                                             <span className="visually-hidden">unread messages</span>
                                                         </span>
@@ -210,7 +209,7 @@ function Header() {
                                                                         </a>
                                                                         <h6><span>1 x</span> $80.58</h6>
                                                                         <button className="close-button close_button">
-                                                                            <i className="fa-solid fa-xmark" />
+                                                                        <i className="fa-thin fa-phone-volume"></i>
                                                                         </button>
                                                                     </div>
                                                                 </div>
@@ -219,7 +218,7 @@ function Header() {
                                                                 <div className="drop-cart">
                                                                     <a href="product-left-thumbnail.html" className="drop-image">
                                                                         {/* <img src={product2} className=" lazyload" alt /> */}
-                                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                                        <i className="fa-solid fa-cart-shopping"></i>
                                                                     </a>
                                                                     <div className="drop-contain">
                                                                         <a href="product-left-thumbnail.html">
@@ -249,7 +248,7 @@ function Header() {
                                             <li className="right-side onhover-dropdown">
                                                 <div className="delivery-login-box">
                                                     <div className="delivery-icon">
-                                                        <i class="fa-solid fa-user"></i>
+                                                        <i className="fa-solid fa-user"></i>
                                                     </div>
                                                     <div className="delivery-detail">
                                                         <h6>Hello,</h6>
@@ -284,8 +283,8 @@ function Header() {
                             <div className="header-nav">
                                 <div className="header-nav-left">
                                     <button className="dropdown-category">
-                                        <i data-feather="align-left" />
-                                        <span>All Categories</span>
+                                    <i className="fa-solid fa-list"></i> 
+                                        <span style={{"paddingLeft":"10px"}}> All Categories</span>
                                     </button>
                                     <div className="category-dropdown">
                                         <div className="category-title">
@@ -294,7 +293,7 @@ function Header() {
                                                 <i className="fa-solid fa-xmark" />
                                             </button>
                                         </div>
-                                        <ul className="category-list">
+                                        {/* <ul className="category-list">
                                             <li className="onhover-category-list">
                                                 <a href="#" className="category-name">
                                                     <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg" alt />
@@ -664,7 +663,7 @@ function Header() {
                                                     </div>
                                                 </div>
                                             </li>
-                                        </ul>
+                                        </ul> */}
                                     </div>
                                 </div>
                                 <div className="header-nav-middle">
@@ -677,7 +676,7 @@ function Header() {
                                             <div className="offcanvas-body">
                                                 <ul className="navbar-nav">
                                                     <li className="nav-item dropdown">
-                                                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
+                                                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> <i className="fa-thin fa-house-chimney"/>Home</a>
                                                         <ul className="dropdown-menu">
                                                             <li>
                                                                 <a className="dropdown-item" href="index.html">Kartshop</a>
@@ -709,7 +708,7 @@ function Header() {
                                                         </ul>
                                                     </li>
                                                     <li className="nav-item dropdown">
-                                                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop</a>
+                                                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> <i className="fa-thin fa-shop"/>Shop</a>
                                                         <ul className="dropdown-menu">
                                                             <li>
                                                                 <a className="dropdown-item" href="shop-category-slider.html">Shop
@@ -779,7 +778,7 @@ function Header() {
                                                     </li>
                                                     <li className="nav-item dropdown dropdown-mega">
                                                         <a className="nav-link dropdown-toggle ps-xl-2 ps-0" href="#" data-bs-toggle="dropdown">Mega Menu</a>
-                                                        <div className="dropdown-menu dropdown-menu-2">
+                                                        {/* <div className="dropdown-menu dropdown-menu-2">
                                                             <div className="row">
                                                                 <div className="dropdown-column col-xl-3">
                                                                     <h5 className="dropdown-header">Daily Vegetables</h5>
@@ -815,7 +814,7 @@ function Header() {
                                                                 </div>
                                                                 <div className="dropdown-column dropdown-column-img col-3" />
                                                             </div>
-                                                        </div>
+                                                        </div> */}
                                                     </li>
                                                     <li className="nav-item dropdown">
                                                         <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
@@ -834,7 +833,7 @@ function Header() {
                                                     <li className="nav-item dropdown new-nav-item">
                                                         <label className="new-dropdown">New</label>
                                                         <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
-                                                        <ul className="dropdown-menu">
+                                                        {/* <ul className="dropdown-menu">
                                                             <li className="sub-dropdown-hover">
                                                                 <a className="dropdown-item" href="#">Email
                                                                     Template <span className="new-text"><i className="fa-solid fa-bolt-lightning" /></span></a>
@@ -920,7 +919,7 @@ function Header() {
                                                             <li>
                                                                 <a className="dropdown-item" href="wishlist.html">Wishlist</a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> */}
                                                     </li>
                                                     <li className="nav-item dropdown">
                                                         <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Seller</a>
@@ -957,7 +956,7 @@ function Header() {
                                 </div>
                                 <div className="header-nav-right">
                                     <button className="btn deal-button" data-bs-toggle="modal" data-bs-target="#deal-box">
-                                        <i data-feather="zap" />
+                                    <i className="fa-thin fa-bolt"></i>
                                         <span>Deal Today</span>
                                     </button>
                                 </div>
@@ -977,7 +976,7 @@ function Header() {
                 <ul>
                     <li className="active">
                         <a href="index.html">
-                        <i class="fa-solid fa-house-blank"></i>
+                        <i className="fa-solid fa-house-blank"></i>
                             <span>Home</span>
                         </a>
                     </li>
@@ -989,7 +988,7 @@ function Header() {
                     </li>
                     <li>
                         <a href="search.html" className="search-box">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i className="fa-solid fa-magnifying-glass"></i>
                             <span>Search</span>
                         </a>
                     </li>
@@ -1001,7 +1000,7 @@ function Header() {
                     </li>
                     <li>
                         <a href="cart.html">
-                        <i class="fa-solid fa-house-blank"></i>
+                        <i className="fa-solid fa-house-blank"></i>
                             <span>Cart</span>
                         </a>
                     </li>

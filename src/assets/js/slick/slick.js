@@ -15,8 +15,8 @@
                 appendDots: i(t),
                 arrows: !0,
                 asNavFor: null,
-                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
-                nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>',
+                prevArrow: '<button className="slick-prev" aria-label="Previous" type="button">Previous</button>',
+                nextArrow: '<button className="slick-next" aria-label="Next" type="button">Next</button>',
                 autoplay: !1,
                 autoplaySpeed: 3e3,
                 centerMode: !1,
@@ -173,7 +173,7 @@
         var e = this;
         e.$slides = e.$slider.children(e.options.slide + ":not(.slick-cloned)").addClass("slick-slide"), e.slideCount = e.$slides.length, e.$slides.each(function (e, t) {
             i(t).attr("data-slick-index", e).data("originalStyling", i(t).attr("style") || "")
-        }), e.$slider.addClass("slick-slider"), e.$slideTrack = 0 === e.slideCount ? i('<div class="slick-track"/>').appendTo(e.$slider) : e.$slides.wrapAll('<div class="slick-track"/>').parent(), e.$list = e.$slideTrack.wrap('<div class="slick-list"/>').parent(), e.$slideTrack.css("opacity", 0), !0 !== e.options.centerMode && !0 !== e.options.swipeToSlide || (e.options.slidesToScroll = 1), i("img[data-lazy]", e.$slider).not("[src]").addClass("slick-loading"), e.setupInfinite(), e.buildArrows(), e.buildDots(), e.updateDots(), e.setSlideClasses("number" == typeof e.currentSlide ? e.currentSlide : 0), !0 === e.options.draggable && e.$list.addClass("draggable")
+        }), e.$slider.addClass("slick-slider"), e.$slideTrack = 0 === e.slideCount ? i('<div className="slick-track"/>').appendTo(e.$slider) : e.$slides.wrapAll('<div className="slick-track"/>').parent(), e.$list = e.$slideTrack.wrap('<div className="slick-list"/>').parent(), e.$slideTrack.css("opacity", 0), !0 !== e.options.centerMode && !0 !== e.options.swipeToSlide || (e.options.slidesToScroll = 1), i("img[data-lazy]", e.$slider).not("[src]").addClass("slick-loading"), e.setupInfinite(), e.buildArrows(), e.buildDots(), e.updateDots(), e.setSlideClasses("number" == typeof e.currentSlide ? e.currentSlide : 0), !0 === e.options.draggable && e.$list.addClass("draggable")
     }, e.prototype.buildRows = function () {
         var i, e, t, o, s, n, r, l = this;
         if (o = document.createDocumentFragment(), n = l.$slider.children(), l.options.rows > 1) {
