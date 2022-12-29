@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Header from './Components/Header/Header'
+import Home from './Components/Home/Home'
+
+
+
+// File Import
+import '../src/assets/css/animate.min.css'
+import '../src/assets/css/vendors/slick/slick.css'
+import '../src/assets/css/vendors/slick/slick-theme.css'
+import '../src/assets/css/style.css'
+import '../src/assets/css/vendors/bootstrap.css'
+import '../src/assets/css/vendors/feather-icon.css'
+import '../src/assets/css/bulk-style.css'
+import '../src/assets/css/vendors/animate.css'
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+ <Header/>
+ {/* <Home /> */}
+
+   </>
   );
 }
 
