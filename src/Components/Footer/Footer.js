@@ -12,7 +12,7 @@ function Footer() {
           <div className="service-contain">
             <div className="service-box">
               <div className="service-image">
-                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/product.svg" className="blur-up lazyload" alt />
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/product.svg" className="lazyload" alt />
               </div>
               <div className="service-detail">
                 <h5>Every Fresh Products</h5>
@@ -20,7 +20,7 @@ function Footer() {
             </div>
             <div className="service-box">
               <div className="service-image">
-                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/delivery.svg" className="blur-up lazyload" alt />
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/delivery.svg" className="lazyload" alt />
               </div>
               <div className="service-detail">
                 <h5>Free Delivery For Order Over $50</h5>
@@ -28,7 +28,7 @@ function Footer() {
             </div>
             <div className="service-box">
               <div className="service-image">
-                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/discount.svg" className="blur-up lazyload" alt />
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/discount.svg" className="lazyload" alt />
               </div>
               <div className="service-detail">
                 <h5>Daily Mega Discounts</h5>
@@ -36,7 +36,7 @@ function Footer() {
             </div>
             <div className="service-box">
               <div className="service-image">
-                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/market.svg" className="blur-up lazyload" alt />
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/market.svg" className="lazyload" alt />
               </div>
               <div className="service-detail">
                 <h5>Best Price On The Market</h5>
@@ -52,7 +52,7 @@ function Footer() {
           <div className="footer-logo">
             <div className="theme-logo">
               <a href="index.html">
-                <img src="../assets/images/logo/1.png" className="blur-up lazyload" alt />
+                <img src="../assets/images/logo/1.png" className="lazyload" alt />
               </a>
             </div>
             <div className="footer-logo-contain">
@@ -178,12 +178,12 @@ function Footer() {
                 <ul>
                   <li className="mb-0">
                     <a href="https://play.google.com/store/apps" target="_blank">
-                      <img src="https://themes.pixelstrap.com/fastkart/assets/images/playstore.svg" className="blur-up lazyload" alt />
+                      <img src="https://themes.pixelstrap.com/fastkart/assets/images/playstore.svg" className="lazyload" alt />
                     </a>
                   </li>
                   <li className="mb-0">
                     <a href="https://www.apple.com/in/app-store/" target="_blank">
-                      <img src="https://themes.pixelstrap.com/fastkart/assets/images/appstore.svg" className="blur-up lazyload" alt />
+                      <img src="https://themes.pixelstrap.com/fastkart/assets/images/appstore.svg" className="lazyload" alt />
                     </a>
                   </li>
                 </ul>
@@ -198,7 +198,7 @@ function Footer() {
         <h6 className="text-content">©2022 Fastkart All rights reserved</h6>
       </div>
       <div className="payment">
-        <img src="../assets/images/payment/1.png" className="blur-up lazyload" alt />
+        <img src="../assets/images/payment/1.png" className="lazyload" alt />
       </div>
       <div className="social-link">
         <h6 className="text-content">Stay connected :</h6>
