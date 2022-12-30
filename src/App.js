@@ -21,12 +21,12 @@ import '../src/assets/css/vendors/animate.css'
 
 function App() {
   return (
-   <>
- <Header/>
- <Home />
-<Footer/>
-<Login />
-   </>
+    <>
+      <Header />
+      <Home />
+      <Footer />
+      <Login />
+    </>
   );
 }
 
