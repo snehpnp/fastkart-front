@@ -264,8 +264,9 @@ function Header() {
                                                         <li className="product-box-contain">
                                                             <a href="sign-up.html">Register</a>
                                                         </li>
-                                                        <li className="product-box-contain">
-                                                            <a href="forgot.html">Forgot Password</a>
+                                                        <li className="product-box-contain" widht="100px !important">
+                                                            <span>  <a href="forgot.html">Forgot Password </a></span>
+                                                          
                                                         </li>
                                                     </ul>
                                                 </div>
