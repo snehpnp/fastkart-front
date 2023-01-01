@@ -9,7 +9,7 @@ function Footer() {
     <div className="service-section">
       <div className="row g-3">
         <div className="col-12">
-          <div className="service-contain">
+          {/* <div className="service-contain">
             <div className="service-box">
               <div className="service-image">
                 <img src="https://themes.pixelstrap.com/fastkart/assets/svg/product.svg" className="lazyload" alt />
@@ -42,7 +42,7 @@ function Footer() {
                 <h5>Best Price On The Market</h5>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
@@ -193,7 +193,7 @@ function Footer() {
         </div>
       </div>
     </div>
-    <div className="sub-footer section-small-space">
+    {/* <div className="sub-footer section-small-space">
       <div className="reserve">
         <h6 className="text-content">©2022 Fastkart All rights reserved</h6>
       </div>
@@ -225,7 +225,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-    </div>
+    </div> */}
   </div>
 </footer>
 

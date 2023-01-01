@@ -7,3 +7,6 @@ element {
 element::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
+body::-webkit-scrollbar {
+  display: none;
+}

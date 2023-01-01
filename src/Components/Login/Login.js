@@ -1,4 +1,6 @@
 import React from 'react'
+import LoginImg from '../../assets/images/inner-page/log-in.png'
+
 
 function Login() {
   return (
@@ -11,7 +13,7 @@ function Login() {
     <div className="row">
       <div className="col-xxl-6 col-xl-5 col-lg-6 d-lg-block d-none ms-auto">
         <div className="image-contain">
-          <img src="../assets/images/inner-page/log-in.png" className="img-fluid" alt />
+          <img src={LoginImg} className="img-fluid" alt />
         </div>
       </div>
       <div className="col-xxl-4 col-xl-5 col-lg-6 col-sm-8 mx-auto">

@@ -1,152 +1,7 @@
-import React from 'react'
-import banner1 from '../../assets/images/vegetable/banner/1.jpg'
-import banner2 from '../../assets/images/vegetable/banner/2.jpg'
-import banner3 from '../../assets/images/vegetable/banner/3.jpg'
-import banner4 from '../../assets/images/vegetable/banner/4.jpg'
-import banner5 from '../../assets/images/vegetable/banner/5.jpg'
-import banner6 from '../../assets/images/vegetable/banner/6.jpg' 
-import banner7 from '../../assets/images/vegetable/banner/7.jpg'
-// import banner8 from '../../assets/images/vegetable/banner/8.jpg'
-
-
-
-
-function Home() {
-  return (
-    <>
-
-<section className="home-section pt-2">
-  <div className="container-fluid-lg">
-    <div className="row g-4">
-      <div className="col-xl-8 ratio_65">
-        <div className="home-contain h-100">
-          <div className="h-100">
-            <img src={banner1} className="bg-img  lazyload" alt />
-          </div>
-          <div className="home-detail p-center-left w-75">
-            <div>
-              <h6>Exclusive offer <span>30% Off</span></h6>
-              <h1 className="text-uppercase">Stay home &amp; delivered your <span className="daily">Daily
-                  Needs</span></h1>
-              <p className="w-75 d-none d-sm-block">Vegetables contain many vitamins and minerals that are
-                good for your health.</p>
-              <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">Shop Now <i className="fa-solid fa-right-long icon" /></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-xl-4 ratio_65">
-        <div className="row g-4">
-          <div className="col-xl-12 col-md-6">
-            <div className="home-contain">
-              <img src={banner2} className="bg-img  lazyload" alt />
-              <div className="home-detail p-center-left home-p-sm w-75">
-                <div>
-                  <h2 className="mt-0 text-danger">45% <span className="discount text-title">OFF</span>
-                  </h2>
-                  <h3 className="theme-color">Nut Collection</h3>
-                  <p className="w-75">We deliver organic vegetables &amp; fruits</p>
-                  <a href="shop-left-sidebar.html" className="shop-button">Shop Now <i className="fa-solid fa-right-long" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-12 col-md-6">
-            <div className="home-contain">
-              <img src={banner3} className="bg-img  lazyload" alt />
-              <div className="home-detail p-center-left home-p-sm w-75">
-                <div>
-                  <h3 className="mt-0 theme-color fw-bold">Healthy Food</h3>
-                  <h4 className="text-danger">Organic Market</h4>
-                  <p className="organic">Start your daily shopping with some Organic food</p>
-                  <a href="shop-left-sidebar.html" className="shop-button">Shop Now <i className="fa-solid fa-right-long" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section className="banner-section ratio_60 wow fadeInUp">
-  <div className="container-fluid-lg">
-    <div className="banner-slider">
-      <div>
-        <div className="banner-contain hover-effect">
-          <img src={banner4} className="bg-img  lazyload" alt />
-          <div className="banner-details">
-            <div className="banner-box">
-              <h6 className="text-danger">5% OFF</h6>
-              <h5>Hot Deals on New Items</h5>
-              <h6 className="text-content">Daily Essentials Eggs &amp; Dairy</h6>
-            </div>
-            <a href="shop-left-sidebar.html" className="banner-button text-white">Shop Now <i className="fa-solid fa-right-long ms-2" /></a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div className="banner-contain hover-effect">
-          <img src={banner5} className="bg-img  lazyload" alt />
-          <div className="banner-details">
-            <div className="banner-box">
-              <h6 className="text-danger">5% OFF</h6>
-              <h5>Buy More &amp; Save More</h5>
-              <h6 className="text-content">Fresh Vegetables</h6>
-            </div>
-            <a href="shop-left-sidebar.html" className="banner-button text-white">Shop Now <i className="fa-solid fa-right-long ms-2" /></a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div className="banner-contain hover-effect">
-          <img src={banner6} className="bg-img  lazyload" alt />
-          <div className="banner-details">
-            <div className="banner-box">
-              <h6 className="text-danger">5% OFF</h6>
-              <h5>Organic Meat Prepared</h5>
-              <h6 className="text-content">Delivered to Your Home</h6>
-            </div>
-            <a href="shop-left-sidebar.html" className="banner-button text-white">Shop Now <i className="fa-solid fa-right-long ms-2" /></a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div className="banner-contain hover-effect">
-          <img src={banner7} className="bg-img  lazyload" alt />
-          <div className="banner-details">
-            <div className="banner-box">
-              <h6 className="text-danger">5% OFF</h6>
-              <h5>Buy More &amp; Save More</h5>
-              <h6 className="text-content">Nuts &amp; Snacks</h6>
-            </div>
-            <a href="shop-left-sidebar.html" className="banner-button text-white">Shop Now <i className="fa-solid fa-right-long ms-2" /></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div>
-  {/* <section className="product-section"> */}
-    {/* <div className="container-fluid-lg">
+   {/* {}         <div> */}
+  {/* Product Section Start */}
+  <section className="product-section">
+    <div className="container-fluid-lg">
       <div className="row g-sm-4 g-3">
         <div className="col-xxl-3 col-xl-4 d-none d-xl-block">
           <div className="p-sticky">
@@ -155,7 +10,7 @@ function Home() {
               <ul>
                 <li>
                   <div className="category-list">
-                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg" className=" lazyload" alt />
+                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg" className="lazyload" alt />
                     <h5>
                       <a href="shop-left-sidebar.html">Vegetables &amp; Fruit</a>
                     </h5>
@@ -163,7 +18,7 @@ function Home() {
                 </li>
                 <li>
                   <div className="category-list">
-                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/cup.svg" className=" lazyload" alt />
+                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/cup.svg" className="lazyload" alt />
                     <h5>
                       <a href="shop-left-sidebar.html">Beverages</a>
                     </h5>
@@ -171,7 +26,7 @@ function Home() {
                 </li>
                 <li>
                   <div className="category-list">
-                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/meats.svg" className=" lazyload" alt />
+                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/meats.svg" className="lazyload" alt />
                     <h5>
                       <a href="shop-left-sidebar.html">Meats &amp; Seafood</a>
                     </h5>
@@ -179,7 +34,7 @@ function Home() {
                 </li>
                 <li>
                   <div className="category-list">
-                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/breakfast.svg" className=" lazyload" alt />
+                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/breakfast.svg" className="lazyload" alt />
                     <h5>
                       <a href="shop-left-sidebar.html">Breakfast &amp; Dairy</a>
                     </h5>
@@ -187,7 +42,7 @@ function Home() {
                 </li>
                 <li>
                   <div className="category-list">
-                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/frozen.svg" className=" lazyload" alt />
+                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/frozen.svg" className="lazyload" alt />
                     <h5>
                       <a href="shop-left-sidebar.html">Frozen Foods</a>
                     </h5>
@@ -195,7 +50,7 @@ function Home() {
                 </li>
                 <li>
                   <div className="category-list">
-                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/biscuit.svg" className=" lazyload" alt />
+                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/biscuit.svg" className="lazyload" alt />
                     <h5>
                       <a href="shop-left-sidebar.html">Biscuits &amp; Snacks</a>
                     </h5>
@@ -203,7 +58,7 @@ function Home() {
                 </li>
                 <li>
                   <div className="category-list">
-                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/grocery.svg" className=" lazyload" alt />
+                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/grocery.svg" className="lazyload" alt />
                     <h5>
                       <a href="shop-left-sidebar.html">Grocery &amp; Staples</a>
                     </h5>
@@ -211,7 +66,7 @@ function Home() {
                 </li>
                 <li>
                   <div className="category-list">
-                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/drink.svg" className=" lazyload" alt />
+                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/drink.svg" className="lazyload" alt />
                     <h5>
                       <a href="shop-left-sidebar.html">Wines &amp; Alcohol Drinks</a>
                     </h5>
@@ -219,7 +74,7 @@ function Home() {
                 </li>
                 <li>
                   <div className="category-list">
-                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/milk.svg" className=" lazyload" alt />
+                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/milk.svg" className="lazyload" alt />
                     <h5>
                       <a href="shop-left-sidebar.html">Milk &amp; Dairies</a>
                     </h5>
@@ -227,7 +82,7 @@ function Home() {
                 </li>
                 <li className="pb-30">
                   <div className="category-list">
-                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/pet.svg" className=" lazyload" alt />
+                    <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/pet.svg" className="lazyload" alt />
                     <h5>
                       <a href="shop-left-sidebar.html">Pet Foods</a>
                     </h5>
@@ -260,7 +115,7 @@ function Home() {
             </div>
             <div className="ratio_156 section-t-space">
               <div className="home-contain hover-effect">
-                <img src="../assets/images/vegetable/banner/8.jpg" className="bg-img  lazyload" alt />
+                <img src="../assets/images/vegetable/banner/8.jpg" className="bg-img lazyload" alt />
                 <div className="home-detail p-top-left home-p-medium">
                   <div>
                     <h6 className="text-yellow home-banner">Seafood</h6>
@@ -273,7 +128,7 @@ function Home() {
             </div>
             <div className="ratio_medium section-t-space">
               <div className="home-contain hover-effect">
-                <img src="../assets/images/vegetable/banner/11.jpg" className="img-fluid  lazyload" alt />
+                <img src="../assets/images/vegetable/banner/11.jpg" className="img-fluid lazyload" alt />
                 <div className="home-detail p-top-left home-p-medium">
                   <div>
                     <h4 className="text-yellow text-exo home-banner">Organic</h4>
@@ -292,7 +147,7 @@ function Home() {
                   <li>
                     <div className="offer-product">
                       <a href="product-left-thumbnail.html" className="offer-image">
-                        <img src="../assets/images/vegetable/product/23.png" className=" lazyload" alt />
+                        <img src="../assets/images/vegetable/product/23.png" className="lazyload" alt />
                       </a>
                       <div className="offer-detail">
                         <div>
@@ -308,7 +163,7 @@ function Home() {
                   <li>
                     <div className="offer-product">
                       <a href="product-left-thumbnail.html" className="offer-image">
-                        <img src="../assets/images/vegetable/product/24.png" className=" lazyload" alt />
+                        <img src="../assets/images/vegetable/product/24.png" className="lazyload" alt />
                       </a>
                       <div className="offer-detail">
                         <div>
@@ -324,7 +179,7 @@ function Home() {
                   <li>
                     <div className="offer-product">
                       <a href="product-left-thumbnail.html" className="offer-image">
-                        <img src="../assets/images/vegetable/product/25.png" className=" lazyload" alt />
+                        <img src="../assets/images/vegetable/product/25.png" className="lazyload" alt />
                       </a>
                       <div className="offer-detail">
                         <div>
@@ -340,7 +195,7 @@ function Home() {
                   <li className="mb-0">
                     <div className="offer-product">
                       <a href="product-left-thumbnail.html" className="offer-image">
-                        <img src="../assets/images/vegetable/product/26.png" className=" lazyload" alt />
+                        <img src="../assets/images/vegetable/product/26.png" className="lazyload" alt />
                       </a>
                       <div className="offer-detail">
                         <div>
@@ -368,7 +223,7 @@ function Home() {
                   </div>
                   <div className="review-profile">
                     <div className="review-image">
-                      <img src="../assets/images/vegetable/review/1.jpg" className="img-fluid  lazyload" alt />
+                      <img src="../assets/images/vegetable/review/1.jpg" className="img-fluid lazyload" alt />
                     </div>
                     <div className="review-detail">
                       <h5>Tina Mcdonnale</h5>
@@ -439,11 +294,11 @@ function Home() {
                       <div className="product-box">
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/1.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/1.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -512,11 +367,11 @@ function Home() {
                       <div className="product-box">
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/2.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/2.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -589,11 +444,11 @@ function Home() {
                       <div className="product-box">
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/3.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/3.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -666,11 +521,11 @@ function Home() {
                         </div>
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/4.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/4.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -744,11 +599,11 @@ function Home() {
                       <div className="product-box">
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/5.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/5.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -818,11 +673,11 @@ function Home() {
                       <div className="product-box">
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/6.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/6.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -898,11 +753,11 @@ function Home() {
                         </div>
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/7.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/7.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -971,11 +826,11 @@ function Home() {
                       <div className="product-box">
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/8.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/8.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -1049,11 +904,11 @@ function Home() {
                       <div className="product-box">
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/9.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/9.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -1122,11 +977,11 @@ function Home() {
                       <div className="product-box">
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/10.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/10.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -1200,11 +1055,11 @@ function Home() {
                       <div className="product-box">
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/3.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/3.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -1274,11 +1129,11 @@ function Home() {
                       <div className="product-box">
                         <div className="product-image">
                           <a href="product-left-thumbnail.html">
-                            <img src="../assets/images/vegetable/product/5.png" className="img-fluid  lazyload" alt />
+                            <img src="../assets/images/vegetable/product/5.png" className="img-fluid lazyload" alt />
                           </a>
                           <ul className="product-option">
                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                                 <i data-feather="eye" />
                               </a>
                             </li>
@@ -1362,7 +1217,7 @@ function Home() {
             <div>
               <a href="shop-left-sidebar.html" className="category-box category-dark">
                 <div>
-                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg" className=" lazyload" alt />
+                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg" className="lazyload" alt />
                   <h5>Vegetables &amp; Fruit</h5>
                 </div>
               </a>
@@ -1370,7 +1225,7 @@ function Home() {
             <div>
               <a href="shop-left-sidebar.html" className="category-box category-dark">
                 <div>
-                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/cup.svg" className=" lazyload" alt />
+                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/cup.svg" className="lazyload" alt />
                   <h5>Beverages</h5>
                 </div>
               </a>
@@ -1378,7 +1233,7 @@ function Home() {
             <div>
               <a href="shop-left-sidebar.html" className="category-box category-dark">
                 <div>
-                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/meats.svg" className=" lazyload" alt />
+                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/meats.svg" className="lazyload" alt />
                   <h5>Meats &amp; Seafood</h5>
                 </div>
               </a>
@@ -1386,7 +1241,7 @@ function Home() {
             <div>
               <a href="shop-left-sidebar.html" className="category-box category-dark">
                 <div>
-                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/breakfast.svg" className=" lazyload" alt />
+                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/breakfast.svg" className="lazyload" alt />
                   <h5>Breakfast</h5>
                 </div>
               </a>
@@ -1394,7 +1249,7 @@ function Home() {
             <div>
               <a href="shop-left-sidebar.html" className="category-box category-dark">
                 <div>
-                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/frozen.svg" className=" lazyload" alt />
+                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/frozen.svg" className="lazyload" alt />
                   <h5>Frozen Foods</h5>
                 </div>
               </a>
@@ -1402,7 +1257,7 @@ function Home() {
             <div>
               <a href="shop-left-sidebar.html" className="category-box category-dark">
                 <div>
-                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/milk.svg" className=" lazyload" alt />
+                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/milk.svg" className="lazyload" alt />
                   <h5>Milk &amp; Dairies</h5>
                 </div>
               </a>
@@ -1410,7 +1265,7 @@ function Home() {
             <div>
               <a href="shop-left-sidebar.html" className="category-box category-dark">
                 <div>
-                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/pet.svg" className=" lazyload" alt />
+                  <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/pet.svg" className="lazyload" alt />
                   <h5>Pet Food</h5>
                 </div>
               </a>
@@ -1420,7 +1275,7 @@ function Home() {
             <div className="row g-md-4 g-3">
               <div className="col-md-6">
                 <div className="banner-contain hover-effect">
-                  <img src="../assets/images/vegetable/banner/9.jpg" className="bg-img  lazyload" alt />
+                  <img src="../assets/images/vegetable/banner/9.jpg" className="bg-img lazyload" alt />
                   <div className="banner-details p-center-left p-4">
                     <div>
                       <h3 className="text-exo">50% offer</h3>
@@ -1432,7 +1287,7 @@ function Home() {
               </div>
               <div className="col-md-6">
                 <div className="banner-contain hover-effect">
-                  <img src="../assets/images/vegetable/banner/10.jpg" className="bg-img  lazyload" alt />
+                  <img src="../assets/images/vegetable/banner/10.jpg" className="bg-img lazyload" alt />
                   <div className="banner-details p-center-left p-4">
                     <div>
                       <h3 className="text-exo">50% offer</h3>
@@ -1461,11 +1316,11 @@ function Home() {
                     <div className="product-box">
                       <div className="product-image">
                         <a href="product-left-thumbnail.html">
-                          <img src="../assets/images/vegetable/product/1.png" className="img-fluid  lazyload" alt />
+                          <img src="../assets/images/vegetable/product/1.png" className="img-fluid lazyload" alt />
                         </a>
                         <ul className="product-option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                               <i data-feather="eye" />
                             </a>
                           </li>
@@ -1538,11 +1393,11 @@ function Home() {
                     <div className="product-box">
                       <div className="product-image">
                         <a href="product-left-thumbnail.html">
-                          <img src="../assets/images/vegetable/product/2.png" className="img-fluid  lazyload" alt />
+                          <img src="../assets/images/vegetable/product/2.png" className="img-fluid lazyload" alt />
                         </a>
                         <ul className="product-option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                               <i data-feather="eye" />
                             </a>
                           </li>
@@ -1615,11 +1470,11 @@ function Home() {
                     <div className="product-box">
                       <div className="product-image">
                         <a href="product-left-thumbnail.html">
-                          <img src="../assets/images/vegetable/product/3.png" className="img-fluid  lazyload" alt />
+                          <img src="../assets/images/vegetable/product/3.png" className="img-fluid lazyload" alt />
                         </a>
                         <ul className="product-option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                               <i data-feather="eye" />
                             </a>
                           </li>
@@ -1692,11 +1547,11 @@ function Home() {
                     <div className="product-box">
                       <div className="product-image">
                         <a href="product-left-thumbnail.html">
-                          <img src="../assets/images/vegetable/product/4.png" className="img-fluid  lazyload" alt />
+                          <img src="../assets/images/vegetable/product/4.png" className="img-fluid lazyload" alt />
                         </a>
                         <ul className="product-option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                               <i data-feather="eye" />
                             </a>
                           </li>
@@ -1769,11 +1624,11 @@ function Home() {
                     <div className="product-box">
                       <div className="product-image">
                         <a href="product-left-thumbnail.html">
-                          <img src="../assets/images/vegetable/product/5.png" className="img-fluid  lazyload" alt />
+                          <img src="../assets/images/vegetable/product/5.png" className="img-fluid lazyload" alt />
                         </a>
                         <ul className="product-option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                               <i data-feather="eye" />
                             </a>
                           </li>
@@ -1846,11 +1701,11 @@ function Home() {
                     <div className="product-box">
                       <div className="product-image">
                         <a href="product-left-thumbnail.html">
-                          <img src="../assets/images/vegetable/product/4.png" className="img-fluid  lazyload" alt />
+                          <img src="../assets/images/vegetable/product/4.png" className="img-fluid lazyload" alt />
                         </a>
                         <ul className="product-option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#view">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#view">
                               <i data-feather="eye" />
                             </a>
                           </li>
@@ -1921,7 +1776,7 @@ function Home() {
           </div>
           <div className="section-t-space">
             <div className="banner-contain">
-              <img src="../assets/images/vegetable/banner/15.jpg" className="bg-img  lazyload" alt />
+              <img src="../assets/images/vegetable/banner/15.jpg" className="bg-img lazyload" alt />
               <div className="banner-details p-center p-4 text-white text-center">
                 <div>
                   <h3 className="lh-base fw-bold offer-text">Get $3 Cashback! Min Order of $30</h3>
@@ -1934,7 +1789,7 @@ function Home() {
             <div className="row g-md-4 g-3">
               <div className="col-xxl-8 col-xl-12 col-md-7">
                 <div className="banner-contain hover-effect">
-                  <img src="../assets/images/vegetable/banner/12.jpg" className="bg-img  lazyload" alt />
+                  <img src="../assets/images/vegetable/banner/12.jpg" className="bg-img lazyload" alt />
                   <div className="banner-details p-center-left p-4">
                     <div>
                       <h2 className="text-kaushan fw-normal theme-color">Get Ready To</h2>
@@ -1948,7 +1803,7 @@ function Home() {
               </div>
               <div className="col-xxl-4 col-xl-12 col-md-5">
                 <a href="shop-left-sidebar.html" className="banner-contain hover-effect h-100">
-                  <img src="../assets/images/vegetable/banner/13.jpg" className="bg-img  lazyload" alt />
+                  <img src="../assets/images/vegetable/banner/13.jpg" className="bg-img lazyload" alt />
                   <div className="banner-details p-center-left p-4 h-100">
                     <div>
                       <h2 className="text-kaushan fw-normal text-danger">20% Off</h2>
@@ -1977,7 +1832,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/11.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/11.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -1993,7 +1848,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/12.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/12.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2009,7 +1864,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/13.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/13.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2025,7 +1880,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/14.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/14.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2045,7 +1900,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/15.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/15.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2061,7 +1916,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/16.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/16.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2077,7 +1932,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/17.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/17.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2093,7 +1948,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/18.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/18.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2113,7 +1968,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/19.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/19.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2129,7 +1984,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/20.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/20.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2145,7 +2000,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/21.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/21.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2161,7 +2016,7 @@ function Home() {
                 <li>
                   <div className="offer-product">
                     <a href="product-left-thumbnail.html" className="offer-image">
-                      <img src="../assets/images/vegetable/product/22.png" className=" lazyload" alt />
+                      <img src="../assets/images/vegetable/product/22.png" className="lazyload" alt />
                     </a>
                     <div className="offer-detail">
                       <div>
@@ -2179,7 +2034,7 @@ function Home() {
           </div>
           <div className="section-t-space">
             <div className="banner-contain hover-effect">
-              <img src="../assets/images/vegetable/banner/14.jpg" className="bg-img  lazyload" alt />
+              <img src="../assets/images/vegetable/banner/14.jpg" className="bg-img lazyload" alt />
               <div className="banner-details p-center banner-b-space w-100 text-center">
                 <div>
                   <h6 className="ls-expanded theme-color mb-sm-3 mb-1">SUMMER</h6>
@@ -2204,7 +2059,7 @@ function Home() {
               <div className="blog-box">
                 <div className="blog-box-image">
                   <a href="blog-detail.html" className="blog-image">
-                    <img src="../assets/images/vegetable/blog/1.jpg" className="bg-img  lazyload" alt />
+                    <img src="../assets/images/vegetable/blog/1.jpg" className="bg-img lazyload" alt />
                   </a>
                 </div>
                 <a href="blog-detail.html" className="blog-detail">
@@ -2217,7 +2072,7 @@ function Home() {
               <div className="blog-box">
                 <div className="blog-box-image">
                   <a href="blog-detail.html" className="blog-image">
-                    <img src="../assets/images/vegetable/blog/2.jpg" className="bg-img  lazyload" alt />
+                    <img src="../assets/images/vegetable/blog/2.jpg" className="bg-img lazyload" alt />
                   </a>
                 </div>
                 <a href="blog-detail.html" className="blog-detail">
@@ -2230,7 +2085,7 @@ function Home() {
               <div className="blog-box">
                 <div className="blog-box-image">
                   <a href="blog-detail.html" className="blog-image">
-                    <img src="../assets/images/vegetable/blog/3.jpg" className="bg-img  lazyload" alt />
+                    <img src="../assets/images/vegetable/blog/3.jpg" className="bg-img lazyload" alt />
                   </a>
                 </div>
                 <a href="blog-detail.html" className="blog-detail">
@@ -2243,7 +2098,7 @@ function Home() {
               <div className="blog-box">
                 <div className="blog-box-image">
                   <a href="blog-detail.html" className="blog-image">
-                    <img src="../assets/images/vegetable/blog/1.jpg" className="bg-img  lazyload" alt />
+                    <img src="../assets/images/vegetable/blog/1.jpg" className="bg-img lazyload" alt />
                   </a>
                 </div>
                 <a href="blog-detail.html" className="blog-detail">
@@ -2255,8 +2110,8 @@ function Home() {
           </div>
         </div>
       </div>
-    </div> */}
-  {/* </section> */}
+    </div>
+  </section>
   {/* Product Section End */}
   {/* Newsletter Section Start */}
   <section className="newsletter-section section-b-space">
@@ -2285,10 +2140,5 @@ function Home() {
       </div>
     </div>
   </section>
-</div>
-
-    </>
-  )
-}
-
-export default Home
+  {/* Newsletter Section End */}
+{/* </div> */}
