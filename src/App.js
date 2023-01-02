@@ -9,8 +9,14 @@ import Footer from './Components/Footer/Footer'
 import Login from './Components/Login/Login'
 import Registration from './Components/Login/Registration';
 import Forgetpassword from './Components/Login/Forgetpassword';
-import Blogs from './Components/Blogs/Blogs';
 import Products from './Components/Products/Products';
+
+
+import Blogsdeteails from './Components/Blogs/Blogsdeteails';
+import Blogsgrid from './Components/Blogs/Blogsgrid';
+import Blogslist from './Components/Blogs/Blogslist';
+
+
 
 import Seller from './Components/Sellers/Seller';
 import Sellerbecome from './Components/Sellers/Sellercecome';
@@ -37,8 +43,15 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/forgot-password" element={<Forgetpassword />} />
-        <Route path="/blogs" element={<Blogs />} />
         <Route path="/products" element={<Products />} />
+
+
+        {/* Blogs */}
+        <Route path="/blogs-detail" element={<Blogsdeteails />} />
+        <Route path="/blogs-grid" element={<Blogsgrid />} />
+        <Route path="/blogs-list" element={<Blogslist />} />
+
+        
 
         {/* Sellers */}
         <Route path="/seller" element={<Seller />} />

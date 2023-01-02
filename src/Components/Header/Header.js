@@ -70,8 +70,17 @@ function Header() {
 
     }
 
+const Blogsdeteails = ()=>{
+    navigate('/blogs-detail');
+}
 
+const Blogsgrid = ()=>{
+    navigate('/blogs-grid');
+}
 
+const Blogslist = ()=>{
+    navigate('/blogs-list');
+}
 
 
 
@@ -229,18 +238,20 @@ function Header() {
                                                     </button>
                                                     <div className="onhover-div">
                                                         <ul className="cart-list">
-                                                            <li className="product-box-contain">
+                                                        <li className="product-box-contain">
                                                                 <div className="drop-cart">
                                                                     <a href="product-left-thumbnail.html" className="drop-image">
-                                                                        <img src={product1} className=" lazyload" alt />
+                                                                        <img src={product2} className=" lazyload" alt />
+                                                                        {/* <i className="fa-solid fa-cart-shopping"></i> */}
                                                                     </a>
                                                                     <div className="drop-contain">
                                                                         <a href="product-left-thumbnail.html">
-                                                                            <h5>Fantasy Crunchy Choco Chip Cookies</h5>
+                                                                            <h5>Peanut Butter Bite Premium Butter Cookies 600 g
+                                                                            </h5>
                                                                         </a>
-                                                                        <h6><span>1 x</span> $80.58</h6>
+                                                                        <h6><span>1 x</span> $25.68</h6>
                                                                         <button className="close-button close_button">
-                                                                            <i className="fa-thin fa-phone-volume"></i>
+                                                                            <i className="fa-solid fa-xmark" />
                                                                         </button>
                                                                     </div>
                                                                 </div>
@@ -248,8 +259,8 @@ function Header() {
                                                             <li className="product-box-contain">
                                                                 <div className="drop-cart">
                                                                     <a href="product-left-thumbnail.html" className="drop-image">
-                                                                        {/* <img src={product2} className=" lazyload" alt /> */}
-                                                                        <i className="fa-solid fa-cart-shopping"></i>
+                                                                        <img src={product2} className=" lazyload" alt />
+                                                                        {/* <i className="fa-solid fa-cart-shopping"></i> */}
                                                                     </a>
                                                                     <div className="drop-contain">
                                                                         <a href="product-left-thumbnail.html">
@@ -453,16 +464,16 @@ function Header() {
                                                         </div> */}
                                                     </li>
                                                     <li className="nav-item dropdown">
-                                                        <a className="nav-link dropdown-toggle" onClick={blogsClick} data-bs-toggle="dropdown">Blog</a>
+                                                        <a className="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Blog</a>
                                                         <ul className="dropdown-menu">
                                                             <li>
-                                                                <a className="dropdown-item" href="blog-detail.html">Blog Detail</a>
+                                                                <a className="dropdown-item" onClick={Blogsdeteails} >Blog Detail</a>
                                                             </li>
                                                             <li>
-                                                                <a className="dropdown-item" href="blog-grid.html">Blog Grid</a>
+                                                                <a className="dropdown-item" onClick={Blogsgrid} >Blog Grid</a>
                                                             </li>
                                                             <li>
-                                                                <a className="dropdown-item" href="blog-list.html">Blog List</a>
+                                                                <a className="dropdown-item" onClick={Blogslist}>Blog List</a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -601,48 +612,12 @@ function Header() {
                     </div>
                 </div>
             </header>
-            {/* <!-- Header End --> */}
 
 
 
 
 
-            {/* <!-- mobile fix menu start --> */}
-            {/* <div className="mobile-menu d-md-none d-block mobile-cart">
-                <ul>
-                    <li className="active">
-                        <a href="index.html">
-                        <i className="fa-solid fa-house-blank"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li className="mobile-category">
-                        <a href="#">
-                            <i className="iconly-Category icli js-link" />
-                            <span>Category</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="search.html" className="search-box">
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                            <span>Search</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="wishlist.html" className="notifi-wishlist">
-                            <i className="iconly-Heart icli" />
-                            <span>My Wish</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="cart.html">
-                        <i className="fa-solid fa-house-blank"></i>
-                            <span>Cart</span>
-                        </a>
-                    </li>
-                </ul>
-            </div> */}
-            {/* mobile fix menu end */}
+
 
 
         </>

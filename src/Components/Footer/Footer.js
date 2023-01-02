@@ -1,4 +1,5 @@
 import React from 'react'
+import logo1 from '../../assets/images/logo/1.png'
 
 function Footer() {
   return (
@@ -52,7 +53,7 @@ function Footer() {
           <div className="footer-logo">
             <div className="theme-logo">
               <a href="index.html">
-                <img src="../assets/images/logo/1.png" className="lazyload" alt />
+                <img src={logo1} className="lazyload" alt />
               </a>
             </div>
             <div className="footer-logo-contain">
