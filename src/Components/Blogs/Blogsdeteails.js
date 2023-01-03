@@ -285,7 +285,7 @@ function Blogsdeteails() {
         </div>
         <div className="col-xxl-9 col-xl-8 col-lg-7 ratio_50">
           <div className="blog-detail-image rounded-3 mb-4">
-            <img src={blog1} className="bg-img lazyload" width={"1000px"} height="400px"  />
+            <img src={blog1} className="bg-img lazyload" width={"700px"} height="400px"  />
             <div className="blog-image-contain">
               <ul className="contain-list">
                 <li>backpack</li>

@@ -104,7 +104,7 @@ function Home() {
         </div>
       </section>
 
-      {/* <section className="banner-section ratio_60 wow fadeInUp">
+      <section className="banner-section ratio_60 wow fadeInUp">
   <div className="container-fluid-lg">
     <div className="banner-slider">
       <div>
@@ -162,7 +162,7 @@ function Home() {
     </div>
   </div>
   
-</section> */}
+</section> 
 
 
 
