@@ -3,14 +3,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 
 import unitedstates from '../../assets/images/country/united-states.png'
-// import Germany from '../../assets/images/country/germany.png'
-import turkish from '../../assets/images/country/turkish.png'
-import product1 from '../../assets/images/vegetable/product/1.png'
+
 import product2 from '../../assets/images/vegetable/product/2.png'
-// import product3 from '../../assets/images/vegetable/product/3.png'
-// import product4 from '../../assets/images/vegetable/product/4.png'
-// import product5 from '../../assets/images/vegetable/product/5.png'
-// import product6 from '../../assets/images/vegetable/product/6.png'
 import logo1 from '../../assets/images/logo/1.png'
 
 
@@ -19,73 +13,65 @@ import logo1 from '../../assets/images/logo/1.png'
 
 function Header() {
     const location = useLocation()
-
     const navigate = useNavigate();
 
     const homeClick = () => {
         navigate('/');
-
     }
-
     const shopClick = () => {
         navigate('/shop');
-
     }
     const productClick = () => {
         navigate('/product');
-
     }
     const megamenuClick = () => {
         navigate('/megamenu');
-
     }
-
     const blogsClick = () => {
         navigate('/blog');
-
     }
-
     const pagesClick = () => {
         navigate('/pages');
-
     }
-
     const sellerClick = () => {
         navigate('/seller');
-
     }
-
     const loginClick = () => {
         navigate('/login');
-
     }
-
-
     const registrationClick = () => {
         navigate('/registration');
-
     }
     const forgotpasswordClick = () => {
         navigate('/forgot-password');
-
     }
-
-const Blogsdeteails = ()=>{
-    navigate('/blogs-detail');
-}
-
-const Blogsgrid = ()=>{
-    navigate('/blogs-grid');
-}
-
-const Blogslist = ()=>{
-    navigate('/blogs-list');
-}
-
-
-
-
-
+    const Blogsdeteails = () => {
+        navigate('/blogs-detail');
+    }
+    const Blogsgrid = () => {
+        navigate('/blogs-grid');
+    }
+    const Blogslist = () => {
+        navigate('/blogs-list');
+    }
+    const ContactClick = () => {
+        navigate('/Contact')
+    }
+    const WishlistClick = () => {
+        navigate('/wishlist')
+    }
+    const becameSellerClick = () => {
+        navigate('/seller-become')
+    }
+    const sellerDashBoardClick = () => {
+        navigate('/seller-dashboard')
+    }
+    const sellerDetailClick = () => {
+        navigate('/seller-detail')
+    }
+    const sellerGridClick = () => {
+        navigate('/seller-grid')
+    }
 
 
 
@@ -213,18 +199,18 @@ const Blogslist = ()=>{
                                                 </div>
                                             </li>
                                             <li className="right-side">
-                                                <a href="contact-us.html" className="delivery-login-box">
+                                                <a onClick={ContactClick} className="delivery-login-box">
                                                     <div className="delivery-icon">
                                                         <i className="fa-solid fa-phone-volume"></i>
                                                     </div>
-                                                    <div className="delivery-detail">
+                                                    {/* <div className="delivery-detail">
                                                         <h6>24/7 Delivery</h6>
                                                         <h5>+91 888 104 2340</h5>
-                                                    </div>
+                                                    </div> */}
                                                 </a>
                                             </li>
                                             <li className="right-side">
-                                                <a href="wishlist.html" className="btn p-0 position-relative header-wishlist">
+                                                <a onClick={WishlistClick} className="btn p-0 position-relative header-wishlist">
                                                     <i className="fa-thin fa-heart"></i>
                                                 </a>
                                             </li>
@@ -238,11 +224,11 @@ const Blogslist = ()=>{
                                                     </button>
                                                     <div className="onhover-div">
                                                         <ul className="cart-list">
-                                                        <li className="product-box-contain">
+                                                            <li className="product-box-contain">
                                                                 <div className="drop-cart">
                                                                     <a href="product-left-thumbnail.html" className="drop-image">
                                                                         <img src={product2} className=" lazyload" alt />
-                                                                        {/* <i className="fa-solid fa-cart-shopping"></i> */}
+                                                                        <i className="fa-solid fa-cart-shopping"></i>
                                                                     </a>
                                                                     <div className="drop-contain">
                                                                         <a href="product-left-thumbnail.html">
@@ -425,46 +411,10 @@ const Blogslist = ()=>{
                                                     </li>
                                                     <li className="nav-item dropdown dropdown-mega">
                                                         <a className="nav-link dropdown-toggle ps-xl-2 ps-0" onClick={megamenuClick} data-bs-toggle="dropdown">Mega Menu</a>
-                                                        {/* <div className="dropdown-menu dropdown-menu-2">
-                                                            <div className="row">
-                                                                <div className="dropdown-column col-xl-3">
-                                                                    <h5 className="dropdown-header">Daily Vegetables</h5>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Beans
-                                                                        &amp; Brinjals</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Broccoli &amp; Cauliflower</a>
-                                                                    <a href="shop-left-sidebar.html" className="dropdown-item">Chilies, Garlic</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Vegetables &amp; Salads</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Gourd, Cucumber</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Herbs
-                                                                        &amp; Sprouts</a>
-                                                                    <a href="demo-personal-portfolio.html" className="dropdown-item">Lettuce &amp; Leafy</a>
-                                                                </div>
-                                                                <div className="dropdown-column col-xl-3">
-                                                                    <h5 className="dropdown-header">Baby Tender</h5>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Beans
-                                                                        &amp; Brinjals</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Broccoli &amp; Cauliflower</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Chilies, Garlic</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Vegetables &amp; Salads</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Gourd, Cucumber</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Potatoes &amp; Tomatoes</a>
-                                                                    <a href="shop-left-sidebar.html" className="dropdown-item">Peas
-                                                                        &amp; Corn</a>
-                                                                </div>
-                                                                <div className="dropdown-column col-xl-3">
-                                                                    <h5 className="dropdown-header">Exotic Vegetables</h5>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Asparagus &amp; Artichokes</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Avocados &amp; Peppers</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Broccoli &amp; Zucchini</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Celery, Fennel &amp; Leeks</a>
-                                                                    <a className="dropdown-item" href="shop-left-sidebar.html">Chilies &amp; Lime</a>
-                                                                </div>
-                                                                <div className="dropdown-column dropdown-column-img col-3" />
-                                                            </div>
-                                                        </div> */}
+
                                                     </li>
                                                     <li className="nav-item dropdown">
-                                                        <a className="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Blog</a>
+                                                        <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
                                                         <ul className="dropdown-menu">
                                                             <li>
                                                                 <a className="dropdown-item" onClick={Blogsdeteails} >Blog Detail</a>
@@ -480,120 +430,27 @@ const Blogslist = ()=>{
                                                     <li className="nav-item dropdown new-nav-item">
                                                         <label className="new-dropdown">New</label>
                                                         <a className="nav-link dropdown-toggle" onClick={pagesClick} data-bs-toggle="dropdown">Pages</a>
-                                                        {/* <ul className="dropdown-menu">
-                                                            <li className="sub-dropdown-hover">
-                                                                <a className="dropdown-item" href="#">Email
-                                                                    Template <span className="new-text"><i className="fa-solid fa-bolt-lightning" /></span></a>
-                                                                <ul className="sub-menu">
-                                                                    <li>
-                                                                        <a href="https://themes.pixelstrap.com/fastkart/email-templete/abandonment-email.html">Abandonment</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="https://themes.pixelstrap.com/fastkart/email-templete/offer-template.html">Offer
-                                                                            Template</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="https://themes.pixelstrap.com/fastkart/email-templete/order-success.html">Order
-                                                                            Success</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="https://themes.pixelstrap.com/fastkart/email-templete/reset-password.html">Reset
-                                                                            Password</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="https://themes.pixelstrap.com/fastkart/email-templete/welcome.html">Welcome
-                                                                            template</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li className="sub-dropdown-hover">
-                                                                <a className="dropdown-item" href="#">Invoice
-                                                                    Template <span className="new-text"><i className="fa-solid fa-bolt-lightning" /></span></a>
-                                                                <ul className="sub-menu">
-                                                                    <li>
-                                                                        <a href="https://themes.pixelstrap.com/fastkart/invoice/invoice-1.html">Invoice 1</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="https://themes.pixelstrap.com/fastkart/invoice/invoice-2.html">Invoice 2</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="https://themes.pixelstrap.com/fastkart/invoice/invoice-3.html">Invoice 3</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="404.html">404</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="about-us.html">About Us</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="cart.html">Cart</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="contact-us.html">Contact</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="checkout.html">Checkout</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="coming-soon.html">Coming Soon</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="compare.html">Compare</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="faq.html">Faq</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="order-success.html">Order
-                                                                    Success</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="order-tracking.html">Order
-                                                                    Tracking</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="otp.html">OTP</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="search.html">Search</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="user-dashboard.html">User
-                                                                    Dashboard</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="wishlist.html">Wishlist</a>
-                                                            </li>
-                                                        </ul> */}
                                                     </li>
                                                     <li className="nav-item dropdown">
                                                         <a className="nav-link dropdown-toggle" onClick={sellerClick} data-bs-toggle="dropdown">Seller</a>
                                                         <ul className="dropdown-menu">
                                                             <li>
-                                                                <a className="dropdown-item" href="seller-become.html">Become a
+                                                                <a className="dropdown-item" onClick={becameSellerClick}>Become a
                                                                     Seller</a>
                                                             </li>
                                                             <li>
-                                                                <a className="dropdown-item" href="seller-dashboard.html">Seller
+                                                                <a className="dropdown-item" onClick={sellerDashBoardClick}>Seller
                                                                     Dashboard</a>
                                                             </li>
                                                             <li>
-                                                                <a className="dropdown-item" href="seller-detail.html">Seller
+                                                                <a className="dropdown-item" onClick={sellerDetailClick}>Seller
                                                                     Detail</a>
                                                             </li>
+
                                                             <li>
-                                                                <a className="dropdown-item" href="seller-detail-2.html">Seller
-                                                                    Detail 2</a>
+                                                                <a className="dropdown-item" onClick={sellerGridClick}>Seller Grid</a>
                                                             </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="seller-grid.html">Seller Grid</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="seller-grid-2.html">Seller Grid
-                                                                    2</a>
-                                                            </li>
+
                                                         </ul>
                                                     </li>
                                                 </ul>

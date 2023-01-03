@@ -10,6 +10,8 @@ import Login from './Components/Login/Login'
 import Registration from './Components/Login/Registration';
 import Forgetpassword from './Components/Login/Forgetpassword';
 import Products from './Components/Products/Products';
+import Contack from './Components/Contact/Contack';
+import Wishlist from './Components/Wishlist/Wishlist';
 
 
 import Blogsdeteails from './Components/Blogs/Blogsdeteails';
@@ -18,8 +20,10 @@ import Blogslist from './Components/Blogs/Blogslist';
 
 
 
-import Seller from './Components/Sellers/Seller';
 import Sellerbecome from './Components/Sellers/Sellercecome';
+import Sellerdashboard from './Components/Sellers/Sellerdashboard';
+import Sellerdetails from './Components/Sellers/Sellerdetails';
+import Sellergrid from './Components/Sellers/Sellergrid';
 
 
 // File Import
@@ -44,6 +48,9 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/forgot-password" element={<Forgetpassword />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/Contact" element={<Contack />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+
 
 
         {/* Blogs */}
@@ -54,8 +61,11 @@ function App() {
         
 
         {/* Sellers */}
-        <Route path="/seller" element={<Seller />} />
         <Route path="/seller-become" element={<Sellerbecome />} />
+        <Route path="/seller-dashboard" element={<Sellerdashboard />} />
+        <Route path="/seller-detail" element={<Sellerdetails />} />
+        <Route path="/seller-grid" element={<Sellergrid />} />
+
 
 
 
