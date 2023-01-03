@@ -5,6 +5,8 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
+import Home1 from './Components/Home/Home1';
+
 import Footer from './Components/Footer/Footer'
 import Login from './Components/Login/Login'
 import Registration from './Components/Login/Registration';
@@ -43,7 +45,9 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home1 />} />
+
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/forgot-password" element={<Forgetpassword />} />
