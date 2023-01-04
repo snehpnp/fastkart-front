@@ -10,3 +10,7 @@ element::-webkit-scrollbar {
 body::-webkit-scrollbar {
   display: none;
 }
+
+a{
+  text-decoration: none !important;
+}

@@ -1,7 +1,8 @@
 
 import { Route, Routes, useLocation } from 'react-router-dom';
-
-
+import $ from "jquery";
+// import './assets/js/slick/custom_slick'
+// import './assets/js/slick/slick'
 
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
