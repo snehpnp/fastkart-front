@@ -13,6 +13,10 @@ import banner3 from '../../assets/images/vegetable/banner/3.jpg'
 // import banner7 from '../../assets/images/vegetable/banner/7.jpg'
 
 import veg1 from '../../assets/images/veg-3/banner/1.png'
+import veg2 from '../../assets/images/veg-3/banner/2.png'
+import veg3 from '../../assets/images/veg-3/banner/3.png'
+
+
 
 import home1 from '../../assets/images/veg-3/home/1.png'
 import home2 from '../../assets/images/veg-3/home/2.png'
@@ -80,7 +84,7 @@ function Home1() {
 
   const settings = {
     infinite: true,
-    speed: 1000,
+    speed: 4000,
     slidesToShow: 4,
     slidesToScroll: 2,
     autoplay: true,
@@ -93,7 +97,7 @@ function Home1() {
 
   const settings1 = {
     infinite: true,
-    speed: 1000,
+    speed: 4000,
     slidesToShow: 2,
     slidesToScroll: 2,
     autoplay: true,
@@ -105,11 +109,11 @@ function Home1() {
   };
   const settings2 = {
     infinite: true,
-    speed: 1000,
+    // speed: 4000,
     slidesToShow: 2,
     slidesToScroll: 2,
     autoplay: true,
-    autoplaySpeed: 2000,
+    // autoplaySpeed: 2000,
     draggable: false,
     dots: false,
     useCSS: true
@@ -118,7 +122,7 @@ function Home1() {
 
   const settings3 = {
     infinite: true,
-    speed: 1000,
+    speed: 4000,
     slidesToShow: 2,
     slidesToScroll: 2,
     autoplay: true,
@@ -130,16 +134,27 @@ function Home1() {
   };
   const settings4 = {
     infinite: true,
-    speed: 1000,
-    slidesToShow: 2,
+    speed: 4000,
+    slidesToShow: 4,
+    // slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    draggable: false,
+    dots: false
+  };
+
+  const settings5 = {
+    infinite: true,
+    speed: 4000,
+    slidesToShow: 3,
     slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 2000,
     draggable: false,
     dots: false,
-    slidesPerRow: 1
+    slidesPerRow: 1,
+    useCSS: true
   };
-
 
 
 
@@ -152,15 +167,15 @@ function Home1() {
           <div className="container-fluid-lg">
             <div className="row g-4">
               <div className="col-xxl-6 col-md-8">
-                <div className="home-contain h-100">
-                  <img src={home1} className="img-fluid bg-img  lazyload" alt />
+                <div className="home-contain h-100" style={{ "backgroundImage": `url(${home1})`, "backgroundSize": "cover", "backgroundPosition": "center", "backgroundRepeat": "no-repeat", "display": "block" }}>
+                  {/* <img src={home1} className="img-fluid bg-img lazyload" alt /> */}
                   <div className="home-detail home-width p-center-left position-relative">
                     <div>
                       <h6 className="ls-expanded theme-color">ORGANIC</h6>
                       <h1 className="fw-bold w-100">100% Fresh</h1>
                       <h3 className="text-content fw-light">Fruit &amp; Vegetables</h3>
                       <p className="d-sm-block d-none">Free shipping on all your order. we deliver you enjoy</p>
-                      <button onclick="location.href = 'shop-left-sidebar.html';" className="btn mt-sm-4 btn-2 theme-bg-color text-white mend-auto btn-2-animation">Shop
+                      <button className="btn mt-sm-4 btn-2 theme-bg-color text-white mend-auto btn-2-animation">Shop
                         Now</button>
                     </div>
                   </div>
@@ -169,13 +184,13 @@ function Home1() {
               <div className="col-xxl-3 col-md-4 ratio_medium d-md-block d-none">
                 <div className="home-contain home-small h-100">
                   <div className="h-100">
-                    <img src={home2} className="img-fluid bg-img  lazyload" alt />
+                    <img src={home2} className="img-fluid bg-img lazyload" alt />
                   </div>
                   <div className="home-detail text-center p-top-center w-100 text-white">
                     <div>
                       <h4 className="fw-bold">Fresh &amp; 100% Organic</h4>
                       <h5 className="text-center">famer's market</h5>
-                      <button className="btn bg-white theme-color mt-3 home-button mx-auto btn-2" onclick="location.href = 'shop-left-sidebar.html';">Shop Now</button>
+                      <button className="btn bg-white theme-color mt-3 home-button mx-auto btn-2">Shop Now</button>
                     </div>
                   </div>
                 </div>
@@ -246,7 +261,7 @@ function Home1() {
                       </div>
                     </div>
                     <div>
-                      <div className="shop-category-box border-0 wow fadeIn" data-wow-delay="0.05s">
+                      <div className="shop-category-box border-0 wow fadeIn" >
                         <a href="shop-left-sidebar.html" className="circle-2">
                           <img src={category2} className="img-fluid  lazyload" alt />
                         </a>
@@ -350,7 +365,7 @@ function Home1() {
                           <h6>Fresh Vegetable</h6>
                         </div>
                         <div className="offer-box">
-                          <button onclick="location.href = 'shop-left-sidebar.html';" className="btn-category btn theme-bg-color text-white">View Offer</button>
+                          <button className="btn-category btn theme-bg-color text-white">View Offer</button>
                         </div>
                       </div>
                     </div>
@@ -362,7 +377,7 @@ function Home1() {
                           <h6>Organic Vegetable</h6>
                         </div>
                         <div className="offer-box">
-                          <button onclick="location.href = 'shop-left-sidebar.html';" className="btn-category btn theme-bg-color text-white">View Offer</button>
+                          <button className="btn-category btn theme-bg-color text-white">View Offer</button>
                         </div>
                       </div>
                     </div>
@@ -374,7 +389,7 @@ function Home1() {
                           <h6>Fruita &amp; Vagerables</h6>
                         </div>
                         <div className="offer-box">
-                          <button onclick="location.href = 'shop-left-sidebar.html';" className="btn-category btn theme-bg-color text-white">View Offer</button>
+                          <button className="btn-category btn theme-bg-color text-white">View Offer</button>
                         </div>
                       </div>
                     </div>
@@ -386,7 +401,7 @@ function Home1() {
                           <h6>Fruita &amp; Vagerables</h6>
                         </div>
                         <div className="offer-box">
-                          <button onclick="location.href = 'shop-left-sidebar.html';" className="btn-category btn theme-bg-color text-white">View
+                          <button className="btn-category btn theme-bg-color text-white">View
                             Offer</button>
                         </div>
                       </div>
@@ -397,8 +412,9 @@ function Home1() {
             </div>
           </div>
         </section>
-        {/* Value Section End */}
-        {/* Deal Section Start */}
+
+
+
         <section className="deal-section">
           <div className="container-fluid-lg">
             <div className="title">
@@ -415,26 +431,26 @@ function Home1() {
                         </a>
                         <div className="deal-detail order-sm-1">
                           <button className="buy-box btn theme-bg-color text-white btn-cart">
-                            <i class="fa-light fa-cart-shopping"></i>
+                            <i className="fa-light fa-cart-shopping"></i>
                           </button>
                           <div className="hot-deal">
                             <span>Hot Deals</span>
                           </div>
                           <ul className="rating">
                             <li>
-                              <i class="fa-sharp fa-solid fa-star"></i>
+                              <i className="fa-sharp fa-solid fa-star"></i>
                             </li>
                             <li>
-                              <i class="fa-sharp fa-solid fa-star"></i>
+                              <i className="fa-sharp fa-solid fa-star"></i>
                             </li>
                             <li>
-                              <i class="fa-sharp fa-solid fa-star"></i>
+                              <i className="fa-sharp fa-solid fa-star"></i>
                             </li>
                             <li>
-                              <i class="fa-sharp fa-solid fa-star"></i>
+                              <i className="fa-sharp fa-solid fa-star"></i>
                             </li>
                             <li>
-                              <i class="fa-sharp fa-solid fa-star"></i>
+                              <i className="fa-sharp fa-solid fa-star"></i>
                             </li>
                           </ul>
                           <a href="shop-left-sidebar.html" className="text-title">
@@ -451,7 +467,7 @@ function Home1() {
                               <li>
                                 <div className="counter">
                                   <div className="days">
-                                    <h6 />
+                                    <h6 />{ }
                                   </div>
                                 </div>
                               </li>
@@ -482,13 +498,13 @@ function Home1() {
                       </div>
                     </div>
                     <div>
-                      <div className="deal-box wow fadeInUp" data-wow-delay="0.05s">
+                      <div className="deal-box wow fadeInUp" >
                         <a href="shop-left-sidebar.html" className="category-image order-sm-2">
                           <img src={cate2} className="img-fluid  lazyload" alt />
                         </a>
                         <div className="deal-detail order-sm-1">
                           <button className="buy-box btn theme-bg-color text-white btn-cart">
-                            <i class="fa-light fa-cart-shopping"></i>
+                            <i className="fa-light fa-cart-shopping"></i>
                           </button>
                           <div className="hot-deal">
                             <span>Hot Deals</span>
@@ -554,14 +570,14 @@ function Home1() {
                         </div>
                       </div>
                     </div>
-                    <div>
+                    {/* <div>
                       <div className="deal-box wow fadeInUp" data-wow-delay="0.1s">
                         <a href="shop-left-sidebar.html" className="category-image order-sm-2">
                           <img src={cate3} className="img-fluid  lazyload" alt />
                         </a>
                         <div className="deal-detail order-sm-1">
                           <button className="buy-box btn theme-bg-color text-white btn-cart">
-                            <i class="fa-light fa-cart-shopping"></i>
+                            <i className="fa-light fa-cart-shopping"></i>
                           </button>
                           <div className="hot-deal">
                             <span>Hot Deals</span>
@@ -626,15 +642,15 @@ function Home1() {
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div>
+                    </div> */}
+                    {/* <div>
                       <div className="deal-box wow fadeInUp" data-wow-delay="0.15s">
                         <div className="category-image order-sm-2">
                           <img src={cate1} className="img-fluid" alt />
                         </div>
                         <div className="deal-detail order-sm-1">
                           <button className="buy-box btn theme-bg-color text-white btn-cart">
-                            <i class="fa-light fa-cart-shopping"></i>
+                            <i className="fa-light fa-cart-shopping"></i>
                           </button>
                           <div className="hot-deal">
                             <span>Hot Deals</span>
@@ -699,7 +715,7 @@ function Home1() {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </Slider>
                 </div>
               </div>
@@ -738,7 +754,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -747,12 +763,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -798,12 +814,12 @@ function Home1() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xxl-2 col-lg-3 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.05s">
+                  <div className="col-xxl-2 col-lg-3 col-md-4 col-6 wow fadeInUp" >
                     <div className="product-box-4">
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -812,12 +828,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -871,7 +887,7 @@ function Home1() {
                             <label>50%</label>
                           </div>
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -880,12 +896,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -936,7 +952,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -945,12 +961,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1004,7 +1020,7 @@ function Home1() {
                             <label>-25%</label>
                           </div>
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1013,12 +1029,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1069,7 +1085,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1078,12 +1094,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1134,7 +1150,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1143,12 +1159,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1202,7 +1218,7 @@ function Home1() {
                             <label>-25%</label>
                           </div>
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1211,12 +1227,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1267,7 +1283,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1276,12 +1292,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1332,7 +1348,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1341,12 +1357,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1400,7 +1416,7 @@ function Home1() {
                             <label>50%</label>
                           </div>
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1409,12 +1425,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1468,7 +1484,7 @@ function Home1() {
                             <label>-25%</label>
                           </div>
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1477,12 +1493,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1537,7 +1553,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1546,12 +1562,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1602,7 +1618,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1611,12 +1627,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1667,7 +1683,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1676,12 +1692,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1732,7 +1748,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1741,12 +1757,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1797,7 +1813,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1806,12 +1822,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1862,7 +1878,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1871,12 +1887,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1927,7 +1943,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -1936,12 +1952,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -1992,7 +2008,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2001,12 +2017,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2057,7 +2073,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2066,12 +2082,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2122,7 +2138,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2131,12 +2147,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2191,7 +2207,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2200,12 +2216,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2256,7 +2272,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2265,12 +2281,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2321,7 +2337,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2330,12 +2346,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2386,7 +2402,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2395,12 +2411,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2451,7 +2467,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2460,12 +2476,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2516,7 +2532,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2525,12 +2541,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2581,7 +2597,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2590,12 +2606,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2650,7 +2666,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2659,12 +2675,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2715,7 +2731,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2724,12 +2740,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2780,7 +2796,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2789,12 +2805,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2845,7 +2861,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2854,12 +2870,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2910,7 +2926,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2919,12 +2935,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -2975,7 +2991,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -2984,12 +3000,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3040,7 +3056,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3049,12 +3065,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3105,7 +3121,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3114,12 +3130,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3170,7 +3186,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3179,12 +3195,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3235,7 +3251,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3244,12 +3260,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3304,7 +3320,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3313,12 +3329,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3369,7 +3385,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3378,12 +3394,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3434,7 +3450,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3443,12 +3459,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3499,7 +3515,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3508,12 +3524,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3564,7 +3580,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3573,12 +3589,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3629,7 +3645,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3638,12 +3654,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3694,7 +3710,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3703,12 +3719,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3759,7 +3775,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3768,12 +3784,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3824,7 +3840,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3833,12 +3849,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3889,7 +3905,7 @@ function Home1() {
                       <div className="product-image">
                         <div className="label-flex">
                           <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                            <i class="fa-thin fa-heart"></i>
+                            <i className="fa-thin fa-heart"></i>
                           </button>
                         </div>
                         <a href="product-left-thumbnail.html">
@@ -3898,12 +3914,12 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                            <i class="fa-solid fa-right-left"></i>
+                            <i className="fa-solid fa-right-left"></i>
 
                           </li>
                         </ul>
@@ -3960,28 +3976,43 @@ function Home1() {
           <div className="container-fluid-lg">
             <div className="row gy-xl-0 gy-3">
               <div className="col-xl-6">
-                <div className="banner-contain-3 hover-effect" style={{ "backgroundImage": "url('../../assets/images/veg-3/banner/1.png')","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat","display":"block"}}>
-       
-                  <img src={veg1} className="bg-img img-fluid" alt />
+                <div className="banner-contain-3 hover-effect" style={{ "backgroundImage": `url(${veg1})`, "backgroundSize": "cover", "backgroundPosition": "center", "backgroundRepeat": "no-repeat", "display": "block" }}>
+
+                  {/* <img src={veg1} className="bg-img img-fluid" alt /> */}
                   <div className="banner-detail banner-details-dark text-white p-center-left w-50 position-relative mend-auto">
-                    <div>
+                    <div >
                       <h6 className="ls-expanded text-uppercase">Premium</h6>
                       <h3 className="mb-sm-3 mb-1">Fresh Vegetable &amp; Daily Eating</h3>
                       <h4>Get Extra 50% Off</h4>
-                      <button className="btn theme-color bg-white btn-md fw-bold mt-sm-3 mt-1 mend-auto" onclick="location.href = 'shop-left-sidebar.html';">Shop Now</button>
+                      <button className="btn theme-color bg-white btn-md fw-bold mt-sm-3 mt-1 mend-auto">Shop Now</button>
                     </div>
                   </div>
                 </div>
               </div>
+              {/* <div className="col-xl-6">
+                <div className="banner-contain-3 hover-effect" style={{ "backgroundImage": `url(${veg1})`, "backgroundSize": "cover", "backgroundPosition": "center", "backgroundRepeat": "no-repeat", "display": "block" }}>
+
+                  <div className="banner-detail banner-details-dark text-white p-center-left w-50 position-relative mend-auto">
+                    <div >
+                      <h6 className="ls-expanded text-uppercase">Premium</h6>
+                      <h3 className="mb-sm-3 mb-1">Fresh Vegetable &amp; Daily Eating</h3>
+                      <h4>Get Extra 50% Off</h4>
+                      <button className="btn theme-color bg-white btn-md fw-bold mt-sm-3 mt-1 mend-auto">Shop Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
+
               <div className="col-xl-6">
-                <div className="banner-contain-3 hover-effect">
-                  <img src={banner2} className="bg-img img-fluid" alt />
+                <div className="banner-contain-3 hover-effect" style={{ "backgroundImage": `url(${veg2})`, "backgroundSize": "cover", "backgroundPosition": "center", "backgroundRepeat": "no-repeat", "display": "block" }}>
+                  {/* <img src="../assets/images/veg-3/banner/2.png" className="bg-img img-fluid" alt=""> */}
                   <div className="banner-detail text-dark p-center-left w-50 position-relative mend-auto">
                     <div>
                       <h6 className=" ls-expanded text-uppercase">available</h6>
-                      <h3 className="mb-sm-3 mb-1">100% Natural &amp; Healthy Fruits</h3>
+                      <h3 className="mb-sm-3 mb-1">100 % Natural & Healthy Fruits</h3>
                       <h4 className="text-content">Weekend Special</h4>
-                      <button className="btn theme-bg-color text-white btn-md fw-bold mt-sm-3 mt-1 mend-auto" onclick="location.href = 'shop-left-sidebar.html';">Shop Now</button>
+                      <button className="btn theme-bg-color text-white btn-md fw-bold mt-sm-3 mt-1 mend-auto"
+                        onClick="location.href = 'shop-left-sidebar.html';">Shop Now</button>
                     </div>
                   </div>
                 </div>
@@ -4041,17 +4072,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4059,7 +4090,7 @@ function Home1() {
                               </div>
                             </div>
                             <div className="col-12">
-                              <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
+                              <div className="product-box-4 wow fadeInUp" >
                                 <a href="shop-left-sidebar.html" className="product-image">
                                   <img src={pro2} className="img-fluid" alt />
                                 </a>
@@ -4093,17 +4124,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4145,17 +4176,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4197,17 +4228,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4255,17 +4286,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4273,7 +4304,7 @@ function Home1() {
                               </div>
                             </div>
                             <div className="col-12">
-                              <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
+                              <div className="product-box-4 wow fadeInUp" >
                                 <a href="shop-left-sidebar.html" className="product-image">
                                   <img src={pro5} className="img-fluid" alt />
                                 </a>
@@ -4307,17 +4338,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4359,17 +4390,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4411,17 +4442,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4481,17 +4512,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4499,7 +4530,7 @@ function Home1() {
                               </div>
                             </div>
                             <div className="col-12">
-                              <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
+                              <div className="product-box-4 wow fadeInUp" >
                                 <a href="shop-left-sidebar.html" className="product-image">
                                   <img src={pro2} className="img-fluid" alt />
                                 </a>
@@ -4533,17 +4564,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4585,17 +4616,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4637,17 +4668,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4695,17 +4726,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4713,7 +4744,7 @@ function Home1() {
                               </div>
                             </div>
                             <div className="col-12">
-                              <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
+                              <div className="product-box-4 wow fadeInUp" >
                                 <a href="shop-left-sidebar.html" className="product-image">
                                   <img src={pro5} className="img-fluid" alt />
                                 </a>
@@ -4747,17 +4778,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4799,17 +4830,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4851,17 +4882,17 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i class="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                      <i class="fa-thin fa-heart"></i>
+                                      <i className="fa-thin fa-heart"></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                      <i class="fa-solid fa-right-left"></i>
+                                      <i className="fa-solid fa-right-left"></i>
 
                                     </li>
                                   </ul>
@@ -4920,17 +4951,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -4938,7 +4969,7 @@ function Home1() {
                             </div>
                           </div>
                           <div className="col-12">
-                            <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
+                            <div className="product-box-4 wow fadeInUp" >
                               <a href="shop-left-sidebar.html" className="product-image">
                                 <img src={pro2} className="img-fluid" alt />
                               </a>
@@ -4972,17 +5003,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5024,17 +5055,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5080,17 +5111,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5098,7 +5129,7 @@ function Home1() {
                             </div>
                           </div>
                           <div className="col-12">
-                            <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
+                            <div className="product-box-4 wow fadeInUp" >
                               <a href="shop-left-sidebar.html" className="product-image">
                                 <img src={pro5} className="img-fluid" alt />
                               </a>
@@ -5132,17 +5163,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5184,17 +5215,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5251,17 +5282,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5269,7 +5300,7 @@ function Home1() {
                             </div>
                           </div>
                           <div className="col-12">
-                            <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
+                            <div className="product-box-4 wow fadeInUp" >
                               <a href="shop-left-sidebar.html" className="product-image">
                                 <img src={pro8} className="img-fluid" alt />
                               </a>
@@ -5303,17 +5334,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5355,17 +5386,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5411,17 +5442,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5429,7 +5460,7 @@ function Home1() {
                             </div>
                           </div>
                           <div className="col-12">
-                            <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
+                            <div className="product-box-4 wow fadeInUp" >
                               <a href="shop-left-sidebar.html" className="product-image">
                                 <img src={pro11} className="img-fluid" alt />
                               </a>
@@ -5463,17 +5494,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5515,17 +5546,17 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i class="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
 
-                                    <i class="fa-thin fa-heart"></i>
+                                    <i className="fa-thin fa-heart"></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                                    <i class="fa-solid fa-right-left"></i>
+                                    <i className="fa-solid fa-right-left"></i>
 
                                   </li>
                                 </ul>
@@ -5551,14 +5582,14 @@ function Home1() {
           <div className="container-fluid-lg">
             <div className="row">
               <div className="col-12">
-                <div className="banner-contain-3 section-b-space section-t-space hover-effect">
-                  <img src={banner3} className="img-fluid bg-img" alt />
+                <div className="banner-contain-3 section-b-space section-t-space hover-effect" style={{ "backgroundImage": `url(${veg3})`, "backgroundSize": "cover", "backgroundPosition": "center", "backgroundRepeat": "no-repeat", "display": "block" }}>
+                  {/* <img src={banner3} className="img-fluid bg-img" alt /> */}
                   <div className="banner-detail p-center text-dark position-relative text-center p-0">
                     <div>
                       <h4 className="ls-expanded text-uppercase theme-color">Try Our New</h4>
                       <h2 className="my-3">100% Organic Best Quality Best Price</h2>
                       <h4 className="text-content fw-300">Best Fastkart Food Quality</h4>
-                      <button className="btn theme-bg-color mt-sm-4 btn-md mx-auto text-white fw-bold" onclick="location.href = 'shop-left-sidebar.html';">Shop Now</button>
+                      <button className="btn theme-bg-color mt-sm-4 btn-md mx-auto text-white fw-bold">Shop Now</button>
                     </div>
                   </div>
                 </div>
@@ -5573,13 +5604,16 @@ function Home1() {
             <div className="title">
               <h2>Top Products</h2>
             </div>
+
             <div className="slider-6 img-slider slick-slider-1 arrow-slider">
-              <div>
+              <Slider {...settings4}>
+
+
                 <div className="product-box-4 wow fadeInUp">
                   <div className="product-image">
                     <div className="label-flex">
                       <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
+                        <i className="fa-thin fa-heart"></i>
                       </button>
                     </div>
                     <a href="product-left-thumbnail.html">
@@ -5588,12 +5622,12 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i class="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye"></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                        <i class="fa-solid fa-right-left"></i>
+                        <i className="fa-solid fa-right-left"></i>
 
                       </li>
                     </ul>
@@ -5638,14 +5672,14 @@ function Home1() {
                     </div>
                   </div>
                 </div>
-                <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
+                <div className="product-box-4 wow fadeInUp" >
                   <div className="product-image">
                     <div className="label-flex">
                       <div className="discount">
                         <label>-25%</label>
                       </div>
                       <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
+                        <i className="fa-thin fa-heart"></i>
                       </button>
                     </div>
                     <a href="product-left-thumbnail.html">
@@ -5654,12 +5688,12 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i class="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye"></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                        <i class="fa-solid fa-right-left"></i>
+                        <i className="fa-solid fa-right-left"></i>
 
                       </li>
                     </ul>
@@ -5704,13 +5738,11 @@ function Home1() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
                 <div className="product-box-4 wow fadeInUp">
                   <div className="product-image">
                     <div className="label-flex">
                       <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
+                        <i className="fa-thin fa-heart"></i>
                       </button>
                     </div>
                     <a href="product-left-thumbnail.html">
@@ -5719,12 +5751,12 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i class="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye"></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                        <i class="fa-solid fa-right-left"></i>
+                        <i className="fa-solid fa-right-left"></i>
 
                       </li>
                     </ul>
@@ -5769,11 +5801,11 @@ function Home1() {
                     </div>
                   </div>
                 </div>
-                <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
+                <div className="product-box-4 wow fadeInUp" >
                   <div className="product-image">
                     <div className="label-flex">
                       <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
+                        <i className="fa-thin fa-heart"></i>
                       </button>
                     </div>
                     <a href="product-left-thumbnail.html">
@@ -5782,12 +5814,12 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i class="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye"></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                        <i class="fa-solid fa-right-left"></i>
+                        <i className="fa-solid fa-right-left"></i>
 
                       </li>
                     </ul>
@@ -5832,534 +5864,15 @@ function Home1() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
+              </Slider>
+
+              <Slider {...settings4}>
+
                 <div className="product-box-4 wow fadeInUp">
                   <div className="product-image">
                     <div className="label-flex">
                       <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
-                      </button>
-                    </div>
-                    <a href="product-left-thumbnail.html">
-                      <img src={cate3} className="img-fluid" alt />
-                    </a>
-                    <ul className="option">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                        <i class="fa-solid fa-eye"></i>
-
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                        <i class="fa-solid fa-right-left"></i>
-
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="product-detail">
-                    <ul className="rating">
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                    </ul>
-                    <a href="product-left-thumbnail.html">
-                      <h5 className="name">Onion</h5>
-                    </a>
-                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-                    <div className="price-qty">
-                      <div className="counter-number">
-                        <div className="counter">
-                          <div className="qty-left-minus" data-type="minus" data-field>
-                            <i className="fa-solid fa-minus" />
-                          </div>
-                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                          <div className="qty-right-plus" data-type="plus" data-field>
-                            <i className="fa-solid fa-plus" />
-                          </div>
-                        </div>
-                      </div>
-                      <button className="buy-button buy-button-2 btn btn-cart">
-                        <i className="fa-light fa-cart-shopping text-white m-0" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
-                  <div className="product-image">
-                    <div className="label-flex">
-                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
-                      </button>
-                    </div>
-                    <a href="product-left-thumbnail.html">
-                      <img src={cate6} className="img-fluid" alt />
-                    </a>
-                    <ul className="option">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                        <i class="fa-solid fa-eye"></i>
-
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                        <i class="fa-solid fa-right-left"></i>
-
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="product-detail">
-                    <ul className="rating">
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                    </ul>
-                    <a href="product-left-thumbnail.html">
-                      <h5 className="name">Broccoli</h5>
-                    </a>
-                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-                    <div className="price-qty">
-                      <div className="counter-number">
-                        <div className="counter">
-                          <div className="qty-left-minus" data-type="minus" data-field>
-                            <i className="fa-solid fa-minus" />
-                          </div>
-                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                          <div className="qty-right-plus" data-type="plus" data-field>
-                            <i className="fa-solid fa-plus" />
-                          </div>
-                        </div>
-                      </div>
-                      <button className="buy-button buy-button-2 btn btn-cart">
-                        <i className="fa-light fa-cart-shopping text-white m-0" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="product-box-4 wow fadeInUp">
-                  <div className="product-image">
-                    <div className="label-flex">
-                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
-                      </button>
-                    </div>
-                    <a href="product-left-thumbnail.html">
-                      <img src={cate6} className="img-fluid" alt />
-                    </a>
-                    <ul className="option">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                        <i class="fa-solid fa-eye"></i>
-
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                        <i class="fa-solid fa-right-left"></i>
-
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="product-detail">
-                    <ul className="rating">
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                    </ul>
-                    <a href="product-left-thumbnail.html">
-                      <h5 className="name">Pea</h5>
-                    </a>
-                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-                    <div className="price-qty">
-                      <div className="counter-number">
-                        <div className="counter">
-                          <div className="qty-left-minus" data-type="minus" data-field>
-                            <i className="fa-solid fa-minus" />
-                          </div>
-                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                          <div className="qty-right-plus" data-type="plus" data-field>
-                            <i className="fa-solid fa-plus" />
-                          </div>
-                        </div>
-                      </div>
-                      <button className="buy-button buy-button-2 btn btn-cart">
-                        <i className="fa-light fa-cart-shopping text-white m-0" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
-                  <div className="product-image">
-                    <div className="label-flex">
-                      <div className="discount">
-                        <label>50%</label>
-                      </div>
-                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
-                      </button>
-                    </div>
-                    <a href="product-left-thumbnail.html">
-                      <img src={cate3} className="img-fluid" alt />
-                    </a>
-                    <ul className="option">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                        <i class="fa-solid fa-eye"></i>
-
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                        <i class="fa-solid fa-right-left"></i>
-
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="product-detail">
-                    <ul className="rating">
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                    </ul>
-                    <a href="product-left-thumbnail.html">
-                      <h5 className="name">Cabbage</h5>
-                    </a>
-                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-                    <div className="price-qty">
-                      <div className="counter-number">
-                        <div className="counter">
-                          <div className="qty-left-minus" data-type="minus" data-field>
-                            <i className="fa-solid fa-minus" />
-                          </div>
-                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                          <div className="qty-right-plus" data-type="plus" data-field>
-                            <i className="fa-solid fa-plus" />
-                          </div>
-                        </div>
-                      </div>
-                      <button className="buy-button buy-button-2 btn btn-cart">
-                        <i className="fa-light fa-cart-shopping text-white m-0" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="product-box-4 wow fadeInUp">
-                  <div className="product-image">
-                    <div className="label-flex">
-                      <div className="discount">
-                        <label>-25%</label>
-                      </div>
-                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
-                      </button>
-                    </div>
-                    <a href="product-left-thumbnail.html">
-                      <img src={cate13} className="img-fluid" alt />
-                    </a>
-                    <ul className="option">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                        <i class="fa-solid fa-eye"></i>
-
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                        <i class="fa-solid fa-right-left"></i>
-
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="product-detail">
-                    <ul className="rating">
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                    </ul>
-                    <a href="product-left-thumbnail.html">
-                      <h5 className="name">Strawberry</h5>
-                    </a>
-                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-                    <div className="price-qty">
-                      <div className="counter-number">
-                        <div className="counter">
-                          <div className="qty-left-minus" data-type="minus" data-field>
-                            <i className="fa-solid fa-minus" />
-                          </div>
-                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                          <div className="qty-right-plus" data-type="plus" data-field>
-                            <i className="fa-solid fa-plus" />
-                          </div>
-                        </div>
-                      </div>
-                      <button className="buy-button buy-button-2 btn btn-cart">
-                        <i className="fa-light fa-cart-shopping text-white m-0" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
-                  <div className="product-image">
-                    <div className="label-flex">
-                      <div className="discount">
-                        <label>50%</label>
-                      </div>
-                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
-                      </button>
-                    </div>
-                    <a href="product-left-thumbnail.html">
-                      <img src={cate7} className="img-fluid" alt />
-                    </a>
-                    <ul className="option">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                        <i class="fa-solid fa-eye"></i>
-
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                        <i class="fa-solid fa-right-left"></i>
-
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="product-detail">
-                    <ul className="rating">
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                    </ul>
-                    <a href="product-left-thumbnail.html">
-                      <h5 className="name">Cucumber</h5>
-                    </a>
-                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-                    <div className="price-qty">
-                      <div className="counter-number">
-                        <div className="counter">
-                          <div className="qty-left-minus" data-type="minus" data-field>
-                            <i className="fa-solid fa-minus" />
-                          </div>
-                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                          <div className="qty-right-plus" data-type="plus" data-field>
-                            <i className="fa-solid fa-plus" />
-                          </div>
-                        </div>
-                      </div>
-                      <button className="buy-button buy-button-2 btn btn-cart">
-                        <i className="fa-light fa-cart-shopping text-white m-0" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="product-box-4 wow fadeInUp">
-                  <div className="product-image">
-                    <div className="label-flex">
-                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
-                      </button>
-                    </div>
-                    <a href="product-left-thumbnail.html">
-                      <img src={cate7} className="img-fluid" alt />
-                    </a>
-                    <ul className="option">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                        <i class="fa-solid fa-eye"></i>
-
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                        <i class="fa-solid fa-right-left"></i>
-
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="product-detail">
-                    <ul className="rating">
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                    </ul>
-                    <a href="product-left-thumbnail.html">
-                      <h5 className="name">Apple</h5>
-                    </a>
-                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-                    <div className="price-qty">
-                      <div className="counter-number">
-                        <div className="counter">
-                          <div className="qty-left-minus" data-type="minus" data-field>
-                            <i className="fa-solid fa-minus" />
-                          </div>
-                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                          <div className="qty-right-plus" data-type="plus" data-field>
-                            <i className="fa-solid fa-plus" />
-                          </div>
-                        </div>
-                      </div>
-                      <button className="buy-button buy-button-2 btn btn-cart">
-                        <i className="fa-light fa-cart-shopping text-white m-0" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
-                  <div className="product-image">
-                    <div className="label-flex">
-                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
-                      </button>
-                    </div>
-                    <a href="product-left-thumbnail.html">
-                      <img src={cate6} className="img-fluid" alt />
-                    </a>
-                    <ul className="option">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                        <i class="fa-solid fa-eye"></i>
-
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                        <i class="fa-solid fa-right-left"></i>
-
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="product-detail">
-                    <ul className="rating">
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" className="fill" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                      <li>
-                        <i data-feather="star" />
-                      </li>
-                    </ul>
-                    <a href="product-left-thumbnail.html">
-                      <h5 className="name">Blackberry</h5>
-                    </a>
-                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-                    <div className="price-qty">
-                      <div className="counter-number">
-                        <div className="counter">
-                          <div className="qty-left-minus" data-type="minus" data-field>
-                            <i className="fa-solid fa-minus" />
-                          </div>
-                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                          <div className="qty-right-plus" data-type="plus" data-field>
-                            <i className="fa-solid fa-plus" />
-                          </div>
-                        </div>
-                      </div>
-                      <button className="buy-button buy-button-2 btn btn-cart">
-                        <i className="fa-light fa-cart-shopping text-white m-0" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="product-box-4 wow fadeInUp">
-                  <div className="product-image">
-                    <div className="label-flex">
-                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                        <i class="fa-thin fa-heart"></i>
+                        <i className="fa-thin fa-heart"></i>
                       </button>
                     </div>
                     <a href="product-left-thumbnail.html">
@@ -6368,12 +5881,12 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i class="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye"></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                        <i class="fa-solid fa-right-left"></i>
+                        <i className="fa-solid fa-right-left"></i>
 
                       </li>
                     </ul>
@@ -6417,410 +5930,561 @@ function Home1() {
                       </button>
                     </div>
                   </div>
-                </div></div></div></div></section>
-        <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
-          <div className="product-image">
-            <div className="label-flex">
-              <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                <i class="fa-thin fa-heart"></i>
-              </button>
-            </div>
-            <a href="product-left-thumbnail.html">
-              <img src={cate12} className="img-fluid" alt />
-            </a>
-            <ul className="option">
-              <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                <i class="fa-solid fa-eye"></i>
-
-              </li>
-              <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                <i class="fa-solid fa-right-left"></i>
-
-              </li>
-            </ul>
-          </div>
-          <div className="product-detail">
-            <ul className="rating">
-              <li>
-                <i data-feather="star" className="fill" />
-              </li>
-              <li>
-                <i data-feather="star" className="fill" />
-              </li>
-              <li>
-                <i data-feather="star" />
-              </li>
-              <li>
-                <i data-feather="star" />
-              </li>
-              <li>
-                <i data-feather="star" />
-              </li>
-            </ul>
-            <a href="product-left-thumbnail.html">
-              <h5 className="name">Bell pepper</h5>
-            </a>
-            <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-            <div className="price-qty">
-              <div className="counter-number">
-                <div className="counter">
-                  <div className="qty-left-minus" data-type="minus" data-field>
-                    <i className="fa-solid fa-minus" />
-                  </div>
-                  <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                  <div className="qty-right-plus" data-type="plus" data-field>
-                    <i className="fa-solid fa-plus" />
-                  </div>
                 </div>
-              </div>
-              <button className="buy-button buy-button-2 btn btn-cart">
-                <i className="fa-light fa-cart-shopping text-white m-0" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="product-box-4 wow fadeInUp">
-            <div className="product-image">
-              <div className="label-flex">
-                <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                  <i class="fa-thin fa-heart"></i>
-                </button>
-              </div>
-              <a href="product-left-thumbnail.html">
-                <img src={cate1} className="img-fluid" alt />
-              </a>
-              <ul className="option">
-                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                  <i class="fa-solid fa-eye"></i>
-
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                  <i class="fa-solid fa-right-left"></i>
-
-                </li>
-              </ul>
-            </div>
-            <div className="product-detail">
-              <ul className="rating">
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-              </ul>
-              <a href="product-left-thumbnail.html">
-                <h5 className="name">Eggplant</h5>
-              </a>
-              <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-              <div className="price-qty">
-                <div className="counter-number">
-                  <div className="counter">
-                    <div className="qty-left-minus" data-type="minus" data-field>
-                      <i className="fa-solid fa-minus" />
+                <div className="product-box-4 wow fadeInUp" >
+                  <div className="product-image">
+                    <div className="label-flex">
+                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
+                        <i className="fa-thin fa-heart"></i>
+                      </button>
                     </div>
-                    <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                    <div className="qty-right-plus" data-type="plus" data-field>
-                      <i className="fa-solid fa-plus" />
+                    <a href="product-left-thumbnail.html">
+                      <img src={cate12} className="img-fluid" alt />
+                    </a>
+                    <ul className="option">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
+
+                        <i className="fa-solid fa-eye"></i>
+
+                      </li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+
+                        <i className="fa-solid fa-right-left"></i>
+
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="product-detail">
+                    <ul className="rating">
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" />
+                      </li>
+                      <li>
+                        <i data-feather="star" />
+                      </li>
+                      <li>
+                        <i data-feather="star" />
+                      </li>
+                    </ul>
+                    <a href="product-left-thumbnail.html">
+                      <h5 className="name">Bell pepper</h5>
+                    </a>
+                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
+                    <div className="price-qty">
+                      <div className="counter-number">
+                        <div className="counter">
+                          <div className="qty-left-minus" data-type="minus" data-field>
+                            <i className="fa-solid fa-minus" />
+                          </div>
+                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
+                          <div className="qty-right-plus" data-type="plus" data-field>
+                            <i className="fa-solid fa-plus" />
+                          </div>
+                        </div>
+                      </div>
+                      <button className="buy-button buy-button-2 btn btn-cart">
+                        <i className="fa-light fa-cart-shopping text-white m-0" />
+                      </button>
                     </div>
                   </div>
                 </div>
-                <button className="buy-button buy-button-2 btn btn-cart">
-                  <i className="fa-light fa-cart-shopping text-white m-0" />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
-            <div className="product-image">
-              <div className="label-flex">
-                <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                  <i class="fa-thin fa-heart"></i>
-                </button>
-              </div>
-              <a href="product-left-thumbnail.html">
-                <img src={cate2} className="img-fluid" alt />
-              </a>
-              <ul className="option">
-                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                  <i class="fa-solid fa-eye"></i>
-
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                  <i class="fa-solid fa-right-left"></i>
-
-                </li>
-              </ul>
-            </div>
-            <div className="product-detail">
-              <ul className="rating">
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" />
-                </li>
-              </ul>
-              <a href="product-left-thumbnail.html">
-                <h5 className="name">Potato</h5>
-              </a>
-              <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-              <div className="price-qty">
-                <div className="counter-number">
-                  <div className="counter">
-                    <div className="qty-left-minus" data-type="minus" data-field>
-                      <i className="fa-solid fa-minus" />
+                <div className="product-box-4 wow fadeInUp">
+                  <div className="product-image">
+                    <div className="label-flex">
+                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
+                        <i className="fa-thin fa-heart"></i>
+                      </button>
                     </div>
-                    <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                    <div className="qty-right-plus" data-type="plus" data-field>
-                      <i className="fa-solid fa-plus" />
+                    <a href="product-left-thumbnail.html">
+                      <img src={cate1} className="img-fluid" alt />
+                    </a>
+                    <ul className="option">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
+
+                        <i className="fa-solid fa-eye"></i>
+
+                      </li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+
+                        <i className="fa-solid fa-right-left"></i>
+
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="product-detail">
+                    <ul className="rating">
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                    </ul>
+                    <a href="product-left-thumbnail.html">
+                      <h5 className="name">Eggplant</h5>
+                    </a>
+                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
+                    <div className="price-qty">
+                      <div className="counter-number">
+                        <div className="counter">
+                          <div className="qty-left-minus" data-type="minus" data-field>
+                            <i className="fa-solid fa-minus" />
+                          </div>
+                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
+                          <div className="qty-right-plus" data-type="plus" data-field>
+                            <i className="fa-solid fa-plus" />
+                          </div>
+                        </div>
+                      </div>
+                      <button className="buy-button buy-button-2 btn btn-cart">
+                        <i className="fa-light fa-cart-shopping text-white m-0" />
+                      </button>
                     </div>
                   </div>
                 </div>
-                <button className="buy-button buy-button-2 btn btn-cart">
-                  <i className="fa-light fa-cart-shopping text-white m-0" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="product-box-4 wow fadeInUp">
-            <div className="product-image">
-              <div className="label-flex">
-                <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                  <i class="fa-thin fa-heart"></i>
-                </button>
-              </div>
-              <a href="product-left-thumbnail.html">
-                <img src={cate6} className="img-fluid" alt />
-              </a>
-              <ul className="option">
-                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
-
-                  <i class="fa-solid fa-eye"></i>
-
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
-
-                  <i class="fa-solid fa-right-left"></i>
-
-                </li>
-              </ul>
-            </div>
-            <div className="product-detail">
-              <ul className="rating">
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" />
-                </li>
-                <li>
-                  <i data-feather="star" />
-                </li>
-                <li>
-                  <i data-feather="star" />
-                </li>
-              </ul>
-              <a href="product-left-thumbnail.html">
-                <h5 className="name">Broccoli</h5>
-              </a>
-              <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-              <div className="price-qty">
-                <div className="counter-number">
-                  <div className="counter">
-                    <div className="qty-left-minus" data-type="minus" data-field>
-                      <i className="fa-solid fa-minus" />
+                <div className="product-box-4 wow fadeInUp" >
+                  <div className="product-image">
+                    <div className="label-flex">
+                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
+                        <i className="fa-thin fa-heart"></i>
+                      </button>
                     </div>
-                    <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                    <div className="qty-right-plus" data-type="plus" data-field>
-                      <i className="fa-solid fa-plus" />
+                    <a href="product-left-thumbnail.html">
+                      <img src={cate2} className="img-fluid" alt />
+                    </a>
+                    <ul className="option">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
+
+                        <i className="fa-solid fa-eye"></i>
+
+                      </li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+
+                        <i className="fa-solid fa-right-left"></i>
+
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="product-detail">
+                    <ul className="rating">
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" />
+                      </li>
+                    </ul>
+                    <a href="product-left-thumbnail.html">
+                      <h5 className="name">Potato</h5>
+                    </a>
+                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
+                    <div className="price-qty">
+                      <div className="counter-number">
+                        <div className="counter">
+                          <div className="qty-left-minus" data-type="minus" data-field>
+                            <i className="fa-solid fa-minus" />
+                          </div>
+                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
+                          <div className="qty-right-plus" data-type="plus" data-field>
+                            <i className="fa-solid fa-plus" />
+                          </div>
+                        </div>
+                      </div>
+                      <button className="buy-button buy-button-2 btn btn-cart">
+                        <i className="fa-light fa-cart-shopping text-white m-0" />
+                      </button>
                     </div>
                   </div>
                 </div>
-                <button className="buy-button buy-button-2 btn btn-cart">
-                  <i className="fa-light fa-cart-shopping text-white m-0" />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="product-box-4 wow fadeInUp" data-wow-delay="0.05s">
-            <div className="product-image">
-              <div className="label-flex">
-                <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
-                  <i class="fa-thin fa-heart"></i>
-                </button>
-              </div>
-              <a href="product-left-thumbnail.html">
-                <img src={cate7} className="img-fluid" alt />
-              </a>
-              <ul className="option">
-                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                  <i class="fa-solid fa-eye"></i>
+              </Slider>
 
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
 
-                  <i class="fa-solid fa-right-left"></i>
+              <Slider {...settings4}>
 
-                </li>
-              </ul>
-            </div>
-            <div className="product-detail">
-              <ul className="rating">
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-                <li>
-                  <i data-feather="star" className="fill" />
-                </li>
-              </ul>
-              <a href="product-left-thumbnail.html">
-                <h5 className="name">Cucumber</h5>
-              </a>
-              <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
-              <div className="price-qty">
-                <div className="counter-number">
-                  <div className="counter">
-                    <div className="qty-left-minus" data-type="minus" data-field>
-                      <i className="fa-solid fa-minus" />
+
+                <div className="product-box-4 wow fadeInUp">
+                  <div className="product-image">
+                    <div className="label-flex">
+                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
+                        <i className="fa-thin fa-heart"></i>
+                      </button>
                     </div>
-                    <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
-                    <div className="qty-right-plus" data-type="plus" data-field>
-                      <i className="fa-solid fa-plus" />
+                    <a href="product-left-thumbnail.html">
+                      <img src={cate1} className="img-fluid" alt />
+                    </a>
+                    <ul className="option">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
+
+                        <i className="fa-solid fa-eye"></i>
+
+                      </li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+
+                        <i className="fa-solid fa-right-left"></i>
+
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="product-detail">
+                    <ul className="rating">
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" />
+                      </li>
+                    </ul>
+                    <a href="product-left-thumbnail.html">
+                      <h5 className="name">Eggplant</h5>
+                    </a>
+                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
+                    <div className="price-qty">
+                      <div className="counter-number">
+                        <div className="counter">
+                          <div className="qty-left-minus" data-type="minus" data-field>
+                            <i className="fa-solid fa-minus" />
+                          </div>
+                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
+                          <div className="qty-right-plus" data-type="plus" data-field>
+                            <i className="fa-solid fa-plus" />
+                          </div>
+                        </div>
+                      </div>
+                      <button className="buy-button buy-button-2 btn btn-cart">
+                        <i className="fa-light fa-cart-shopping text-white m-0" />
+                      </button>
                     </div>
                   </div>
                 </div>
-                <button className="buy-button buy-button-2 btn btn-cart">
-                  <i className="fa-light fa-cart-shopping text-white m-0" />
-                </button>
-              </div>
+                <div className="product-box-4 wow fadeInUp" >
+                  <div className="product-image">
+                    <div className="label-flex">
+                      <div className="discount">
+                        <label>-25%</label>
+                      </div>
+                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
+                        <i className="fa-thin fa-heart"></i>
+                      </button>
+                    </div>
+                    <a href="product-left-thumbnail.html">
+                      <img src={cate4} className="img-fluid" alt />
+                    </a>
+                    <ul className="option">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
+
+                        <i className="fa-solid fa-eye"></i>
+
+                      </li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+
+                        <i className="fa-solid fa-right-left"></i>
+
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="product-detail">
+                    <ul className="rating">
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" />
+                      </li>
+                      <li>
+                        <i data-feather="star" />
+                      </li>
+                      <li>
+                        <i data-feather="star" />
+                      </li>
+                    </ul>
+                    <a href="product-left-thumbnail.html">
+                      <h5 className="name">Ginger</h5>
+                    </a>
+                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
+                    <div className="price-qty">
+                      <div className="counter-number">
+                        <div className="counter">
+                          <div className="qty-left-minus" data-type="minus" data-field>
+                            <i className="fa-solid fa-minus" />
+                          </div>
+                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
+                          <div className="qty-right-plus" data-type="plus" data-field>
+                            <i className="fa-solid fa-plus" />
+                          </div>
+                        </div>
+                      </div>
+                      <button className="buy-button buy-button-2 btn btn-cart">
+                        <i className="fa-light fa-cart-shopping text-white m-0" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="product-box-4 wow fadeInUp">
+                  <div className="product-image">
+                    <div className="label-flex">
+                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
+                        <i className="fa-thin fa-heart"></i>
+                      </button>
+                    </div>
+                    <a href="product-left-thumbnail.html">
+                      <img src={cate1} className="img-fluid" alt />
+                    </a>
+                    <ul className="option">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
+
+                        <i className="fa-solid fa-eye"></i>
+
+                      </li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+
+                        <i className="fa-solid fa-right-left"></i>
+
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="product-detail">
+                    <ul className="rating">
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                    </ul>
+                    <a href="product-left-thumbnail.html">
+                      <h5 className="name">Eggplant</h5>
+                    </a>
+                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
+                    <div className="price-qty">
+                      <div className="counter-number">
+                        <div className="counter">
+                          <div className="qty-left-minus" data-type="minus" data-field>
+                            <i className="fa-solid fa-minus" />
+                          </div>
+                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
+                          <div className="qty-right-plus" data-type="plus" data-field>
+                            <i className="fa-solid fa-plus" />
+                          </div>
+                        </div>
+                      </div>
+                      <button className="buy-button buy-button-2 btn btn-cart">
+                        <i className="fa-light fa-cart-shopping text-white m-0" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="product-box-4 wow fadeInUp" >
+                  <div className="product-image">
+                    <div className="label-flex">
+                      <button className="btn p-0 wishlist btn-wishlist notifi-wishlist">
+                        <i className="fa-thin fa-heart"></i>
+                      </button>
+                    </div>
+                    <a href="product-left-thumbnail.html">
+                      <img src={cate2} className="img-fluid" alt />
+                    </a>
+                    <ul className="option">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
+
+                        <i className="fa-solid fa-eye"></i>
+
+                      </li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+
+                        <i className="fa-solid fa-right-left"></i>
+
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="product-detail">
+                    <ul className="rating">
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" className="fill" />
+                      </li>
+                      <li>
+                        <i data-feather="star" />
+                      </li>
+                    </ul>
+                    <a href="product-left-thumbnail.html">
+                      <h5 className="name">Potato</h5>
+                    </a>
+                    <h5 className="price theme-color">$70.21<del>$65.25</del></h5>
+                    <div className="price-qty">
+                      <div className="counter-number">
+                        <div className="counter">
+                          <div className="qty-left-minus" data-type="minus" data-field>
+                            <i className="fa-solid fa-minus" />
+                          </div>
+                          <input className="form-control input-number qty-input" type="text" name="quantity" defaultValue={0} />
+                          <div className="qty-right-plus" data-type="plus" data-field>
+                            <i className="fa-solid fa-plus" />
+                          </div>
+                        </div>
+                      </div>
+                      <button className="buy-button buy-button-2 btn btn-cart">
+                        <i className="fa-light fa-cart-shopping text-white m-0" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </Slider>
+
+
             </div>
+
           </div>
-        </div>
-        {/* Product Sction End */}
-        {/* Blog Section Start */}
+        </section>
+
+
+
+
+
+
+
+
+
+
         <section className="blog-section">
           <div className="container-fluid-lg">
             <div className="title">
               <h2>Blog</h2>
             </div>
             <div className="slider-3 arrow-slider">
-              <div>
-                <div className="blog-box ratio_50">
-                  <div className="blog-box-image">
-                    <a href="blog-detail.html">
-                      <img src={blog1} className="img-fluid bg-img" alt />
-                    </a>
-                  </div>
-                  <div className="blog-detail">
-                    <label>Conversion rate optimization</label>
-                    <a href="blog-detail.html">
-                      <h2>A Fresh Vegetable online market place a fresh...</h2>
-                    </a>
-                    <div className="blog-list">
-                      <span>March 9, 2021</span>
-                      <span>By Emil Kristensen</span>
+              <Slider {...settings5}>
+
+                <div>
+                  <div className="blog-box ratio_50">
+                    <div className="blog-box-image">
+                      <a href="blog-detail.html">
+                        <img src={blog1} className="img-fluid bg-img" alt />
+                      </a>
+                    </div>
+                    <div className="blog-detail">
+                      <label>Conversion rate optimization</label>
+                      <a href="blog-detail.html">
+                        <h2>A Fresh Vegetable online market place a fresh...</h2>
+                      </a>
+                      <div className="blog-list">
+                        <span>March 9, 2021</span>
+                        <span>By Emil Kristensen</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div className="blog-box ratio_50">
-                  <div className="blog-box-image">
-                    <a href="blog-detail.html">
-                      <img src={blog2} className="img-fluid bg-img" alt />
-                    </a>
-                  </div>
-                  <div className="blog-detail">
-                    <label>Email Marketing</label>
-                    <a href="blog-detail.html">
-                      <h2>A Fresh Vegetable online market place a fresh...</h2>
-                    </a>
-                    <div className="blog-list">
-                      <span>March 9, 2021</span>
-                      <span>By Emil Kristensen</span>
+                <div>
+                  <div className="blog-box ratio_50">
+                    <div className="blog-box-image">
+                      <a href="blog-detail.html">
+                        <img src={blog2} className="img-fluid bg-img" alt />
+                      </a>
+                    </div>
+                    <div className="blog-detail">
+                      <label>Email Marketing</label>
+                      <a href="blog-detail.html">
+                        <h2>A Fresh Vegetable online market place a fresh...</h2>
+                      </a>
+                      <div className="blog-list">
+                        <span>March 9, 2021</span>
+                        <span>By Emil Kristensen</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div className="blog-box ratio_50">
-                  <div className="blog-box-image">
-                    <a href="blog-detail.html">
-                      <img src={blog3} className="img-fluid bg-img" alt />
-                    </a>
-                  </div>
-                  <div className="blog-detail">
-                    <label>Conversion rate optimization</label>
-                    <a href="blog-detail.html">
-                      <h2>A Fresh Vegetable online market place a fresh...</h2>
-                    </a>
-                    <div className="blog-list">
-                      <span>March 9, 2021</span>
-                      <span>By Emil Kristensen</span>
+                <div>
+                  <div className="blog-box ratio_50">
+                    <div className="blog-box-image">
+                      <a href="blog-detail.html">
+                        <img src={blog3} className="img-fluid bg-img" alt />
+                      </a>
+                    </div>
+                    <div className="blog-detail">
+                      <label>Conversion rate optimization</label>
+                      <a href="blog-detail.html">
+                        <h2>A Fresh Vegetable online market place a fresh...</h2>
+                      </a>
+                      <div className="blog-list">
+                        <span>March 9, 2021</span>
+                        <span>By Emil Kristensen</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div className="blog-box ratio_50">
-                  <div className="blog-box-image">
-                    <a href="blog-detail.html">
-                      <img src={blog1} className="img-fluid bg-img" alt />
-                    </a>
-                  </div>
-                  <div className="blog-detail">
-                    <label>Conversion rate optimization</label>
-                    <a href="blog-detail.html">
-                      <h2>A Fresh Vegetable online market place a fresh...</h2>
-                    </a>
-                    <div className="blog-list">
-                      <span>March 9, 2021</span>
-                      <span>By Emil Kristensen</span>
+                <div>
+                  <div className="blog-box ratio_50">
+                    <div className="blog-box-image">
+                      <a href="blog-detail.html">
+                        <img src={blog1} className="img-fluid bg-img" alt />
+                      </a>
+                    </div>
+                    <div className="blog-detail">
+                      <label>Conversion rate optimization</label>
+                      <a href="blog-detail.html">
+                        <h2>A Fresh Vegetable online market place a fresh...</h2>
+                      </a>
+                      <div className="blog-list">
+                        <span>March 9, 2021</span>
+                        <span>By Emil Kristensen</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+
+              </Slider>
             </div>
           </div>
         </section>
@@ -6830,8 +6494,8 @@ function Home1() {
           <div className="container-fluid-lg">
             <div className="row">
               <div className="col-12">
-                <div className="newsletter-box hover-effect">
-                  <img src={background1} className="img-fluid bg-img" alt />
+                <div className="newsletter-box hover-effect" style={{ "backgroundImage": `url(${background1})`, "backgroundSize": "cover", "backgroundPosition": "center", "backgroundRepeat": "no-repeat", "display": "block" }}>
+                  {/* <img src={background1} className="img-fluid bg-img" alt /> */}
                   <div className="row">
                     <div className="col-xxl-8 col-xl-7">
                       <div className="newsletter-detail p-center-left text-white">

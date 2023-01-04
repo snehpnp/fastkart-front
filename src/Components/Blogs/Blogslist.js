@@ -64,7 +64,7 @@ function Blogslist() {
                         <p>Monterey jack cheese slices cream cheese cream cheese hard cheese roquefort
                           emmental lancashire. Who moved my cheese dolcelatte st. agur blue cheese fromage
                           mozzarella say cheese mascarpone blue castello.</p>
-                        <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read
+                        <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read
                           More <i className="fa-solid fa-right-long" /></button>
                       </div>
                     </div>
@@ -86,7 +86,7 @@ function Blogslist() {
                         <p>Manchego cauliflower cheese st. agur blue cheese red leicester monterey jack
                           cheesecake the big cheese edam. Gouda monterey jack roquefort hard cheese feta
                           croque monsieur cheeseburger manchego.</p>
-                        <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read
+                        <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read
                           More <i className="fa-solid fa-right-long" /></button>
                       </div>
                     </div>
@@ -111,7 +111,7 @@ function Blogslist() {
                         <p>Cheese triangles say cheese cheese and biscuits dolcelatte jarlsberg cream cheese
                           taleggio fromage frais. Who moved my cheese cottage cheese cheese on toast
                           rubber cheese melted cheese ricotta.</p>
-                        <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read
+                        <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read
                           More <i className="fa-solid fa-right-long" /></button>
                       </div>
                     </div>
@@ -133,7 +133,7 @@ function Blogslist() {
                         <p>Jarlsberg swiss edam. Goat everyone loves cheese strings ricotta cheese and wine
                           pepper jack dolcelatte halloumi. Cream cheese queso croque monsieur camembert de
                           normandie cheddar cheesecake cheese slices croque monsieur.</p>
-                        <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read
+                        <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read
                           More <i className="fa-solid fa-right-long" /></button>
                       </div>
                     </div>
@@ -155,7 +155,7 @@ function Blogslist() {
                         <p>Cream cheese cheese slices chalk and cheese cottage cheese cheddar port-salut
                           everyone loves dolcelatte. Cream cheese camembert de normandie cow chalk and
                           cheese brie gouda cottage cheese cheesy grin.</p>
-                        <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read
+                        <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read
                           More <i className="fa-solid fa-right-long" /></button>
                       </div>
                     </div>
@@ -177,7 +177,7 @@ function Blogslist() {
                         <p>Monterey jack chalk and cheese cheese and biscuits cream cheese fondue say cheese
                           stilton halloumi. Gouda everyone loves chalk and cheese everyone loves stinking
                           bishop manchego stilton.</p>
-                        <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read
+                        <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read
                           More <i className="fa-solid fa-right-long" /></button>
                       </div>
                     </div>
@@ -199,7 +199,7 @@ function Blogslist() {
                         <p>The big cheese fondue st. agur blue cheese. Cheese on toast paneer lancashire
                           cheese and biscuits rubber cheese macaroni cheese queso feta. Stinking bishop
                           fromage brie edam cheesy feet smelly cheese fromage frais paneer.</p>
-                        <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read
+                        <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read
                           More <i className="fa-solid fa-right-long" /></button>
                       </div>
                     </div>
@@ -221,7 +221,7 @@ function Blogslist() {
                         <p>Cheesy grin brie croque monsieur cheesy grin cottage cheese cheese strings
                           dolcelatte cheeseburger. Cheesy feet queso red leicester fromage frais hard
                           cheese cheeseburger fromage when the cheese comes out everybody's happy.</p>
-                        <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read
+                        <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read
                           More <i className="fa-solid fa-right-long" /></button>
                       </div>
                     </div>
@@ -243,7 +243,7 @@ function Blogslist() {
                         <p>Macaroni cheese camembert de normandie airedale. Cheese triangles babybel cow
                           blue castello cheddar cheese and biscuits jarlsberg melted cheese. Caerphilly
                           fromage frais ricotta manchego edam boursin edam swiss.</p>
-                        <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read
+                        <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read
                           More <i className="fa-solid fa-right-long" /></button>
                       </div>
                     </div>

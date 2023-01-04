@@ -68,7 +68,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>one pot creamy mediterranean chicken pasta cream.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -89,7 +89,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>Crispy Frozen Vegetable is the on the Tempura.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -111,7 +111,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>How to start regrowing green onions and other vegetables.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -132,7 +132,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>Starting a vegetable garden: the basics.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -153,7 +153,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>Adapt this simple pasta salad to whatever vegetable.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -174,7 +174,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>With chefs idle and vegetables rotting, China's virus-hit.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -195,7 +195,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>Turn that bowl of pasta into a supercharged veggie vehicle.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -217,7 +217,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>Health, care and skin on the for your organic.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -238,7 +238,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>Fresh organicsm, brand, fresh and picnic place awesome.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -260,7 +260,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>With chefs idle and vegetables rotting, China's virus-hit.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -281,7 +281,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>Vegina good quality special liquide fesh vagitables.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>
@@ -302,7 +302,7 @@ function Blogsgrid() {
                                                 <a href="blog-detail.html">
                                                     <h3>How to freeze fresh vegetables while preserving their best qualities.</h3>
                                                 </a>
-                                                <button onclick="location.href = 'blog-detail.html';" className="blog-button">Read More
+                                                <button onClick="location.href = 'blog-detail.html';" className="blog-button">Read More
                                                     <i className="fa-solid fa-right-long" /></button>
                                             </div>
                                         </div>

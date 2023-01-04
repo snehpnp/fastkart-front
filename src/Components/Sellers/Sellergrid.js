@@ -89,7 +89,7 @@ function Sellergrid() {
                                             </div>
                                         </div>
                                         <div className="seller-category">
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
+                                            <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
                                                     <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
@@ -168,7 +168,7 @@ function Sellergrid() {
                                             </div>
                                         </div>
                                         <div className="seller-category">
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
+                                            <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
                                                     <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
@@ -247,7 +247,7 @@ function Sellergrid() {
                                             </div>
                                         </div>
                                         <div className="seller-category">
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
+                                            <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
                                                     <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
@@ -326,7 +326,7 @@ function Sellergrid() {
                                             </div>
                                         </div>
                                         <div className="seller-category">
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
+                                            <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
                                                     <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
@@ -405,7 +405,7 @@ function Sellergrid() {
                                             </div>
                                         </div>
                                         <div className="seller-category">
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
+                                            <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
                                                     <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
@@ -484,7 +484,7 @@ function Sellergrid() {
                                             </div>
                                         </div>
                                         <div className="seller-category">
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
+                                            <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
                                                     <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
@@ -563,7 +563,7 @@ function Sellergrid() {
                                             </div>
                                         </div>
                                         <div className="seller-category">
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
+                                            <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
                                                     <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
@@ -642,7 +642,7 @@ function Sellergrid() {
                                             </div>
                                         </div>
                                         <div className="seller-category">
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
+                                            <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
                                                     <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
@@ -721,7 +721,7 @@ function Sellergrid() {
                                             </div>
                                         </div>
                                         <div className="seller-category">
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
+                                            <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
                                                     <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />

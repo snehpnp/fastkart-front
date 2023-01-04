@@ -98,14 +98,14 @@
 var contentwidth = $(window).width();
 if (contentwidth < "576") {
     $(".footer-title h4").append(
-        '<span class="according-menu float-end"><i class="fa-solid fa-angle-down"></i></span>'
+        '<span className="according-menu float-end"><i className="fa-solid fa-angle-down"></i></span>'
     );
     $(".footer-title").on("click", function () {
         $(".footer-title")
             .removeClass("active")
             .find("span")
             .replaceWith(
-                '<span class="according-menu float-end"><i class="fa-solid fa-angle-down"></i></span>'
+                '<span className="according-menu float-end"><i className="fa-solid fa-angle-down"></i></span>'
             );
         $(".footer-contact, .footer-contain").slideUp("normal");
         if ($(this).next().is(":hidden") == true) {
@@ -113,14 +113,14 @@ if (contentwidth < "576") {
             $(this)
                 .find("span")
                 .replaceWith(
-                    '<span class="according-menu float-end"><i class="fas fa-chevron-up"></i></span>'
+                    '<span className="according-menu float-end"><i className="fas fa-chevron-up"></i></span>'
                 );
             $(this).next().slideDown("normal");
         } else {
             $(this)
                 .find("span")
                 .replaceWith(
-                    '<span class="according-menu float-end"><i class="fa-solid fa-angle-down"></i></span>'
+                    '<span className="according-menu float-end"><i className="fa-solid fa-angle-down"></i></span>'
                 );
         }
     });
@@ -297,13 +297,13 @@ $(".notifi-wishlist").on("click", function () {
             exit: "animated fadeOutUp",
         },
         icon_type: "class",
-        template: '<div data-notify="container" class="col-xxl-3 col-lg-5 col-md-6 col-sm-7 col-12 alert alert-{0}" role="alert">' +
-            '<button type="button" aria-hidden="true" class="btn-close" data-notify="dismiss"></button>' +
+        template: '<div data-notify="container" className="col-xxl-3 col-lg-5 col-md-6 col-sm-7 col-12 alert alert-{0}" role="alert">' +
+            '<button type="button" aria-hidden="true" className="btn-close" data-notify="dismiss"></button>' +
             '<span data-notify="icon"></span> ' +
             '<span data-notify="title">{1}</span> ' +
             '<span data-notify="message">{2}</span>' +
-            '<div class="progress" data-notify="progressbar">' +
-            '<div class="progress-bar progress-bar-info progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+            '<div className="progress" data-notify="progressbar">' +
+            '<div className="progress-bar progress-bar-info progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
             "</div>" +
             '<a href="{3}" target="{4}" data-notify="url"></a>' +
             "</div>",
@@ -417,23 +417,23 @@ $(".close-notification").click(function () {
 ==========================*/
 var contentwidth = $(window).width();
 if (contentwidth < "767") {
-    $(".onhover-category-list .category-name").append('<span class="according-menu">+</span>');
+    $(".onhover-category-list .category-name").append('<span className="according-menu">+</span>');
     $(".category-name").on("click", function () {
         $(".category-name")
             .removeClass("active")
             .find("span")
-            .replaceWith('<span class="according-menu">+</span>');
+            .replaceWith('<span className="according-menu">+</span>');
         $(".onhover-category-list .onhover-category-box").slideUp("normal");
         if ($(this).next().is(":hidden") == true) {
             $(this).addClass("active");
             $(this)
                 .find("span")
-                .replaceWith('<span class="according-menu">-</span>');
+                .replaceWith('<span className="according-menu">-</span>');
             $(this).next().slideDown("normal");
         } else {
             $(this)
                 .find("span")
-                .replaceWith('<span class="according-menu">+</span>');
+                .replaceWith('<span className="according-menu">+</span>');
         }
     });
     $(".accordion-box").hide();

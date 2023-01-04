@@ -2285,7 +2285,7 @@
                                 offsetY: 0,
                                 startAngle: 0,
                                 endAngle: 360,
-                                expandOnClick: !0,
+                                expandonClick: !0,
                                 dataLabels: {
                                     offset: 0,
                                     minAngleToShowLabel: 10
@@ -4930,7 +4930,7 @@
                 value: function (t) {
                     var e = t.color,
                         i = t.seriesName;
-                    return '<div class="apexcharts-tooltip-rangebar"><div> <span class="series-name" style="color: ' + e + '">' + (i || "") + '</span></div><div> <span class="category">' + t.ylabel + ' </span> <span class="value start-value">' + t.start + '</span> <span class="separator">-</span> <span class="value end-value">' + t.end + "</span></div></div>"
+                    return '<div className="apexcharts-tooltip-rangebar"><div> <span className="series-name" style="color: ' + e + '">' + (i || "") + '</span></div><div> <span className="category">' + t.ylabel + ' </span> <span className="value start-value">' + t.start + '</span> <span className="separator">-</span> <span className="value end-value">' + t.end + "</span></div></div>"
                 }
             }]), s
         }(F),
@@ -5697,7 +5697,7 @@
                         n = t.globals.seriesCandleM[e][i],
                         l = t.globals.seriesCandleL[e][i],
                         h = t.globals.seriesCandleC[e][i];
-                    return t.config.series[e].type && t.config.series[e].type !== s ? '<div class="apexcharts-custom-tooltip">\n          '.concat(t.config.series[e].name ? t.config.series[e].name : "series-" + (e + 1), ": <strong>").concat(t.globals.series[e][i], "</strong>\n        </div>") : '<div class="apexcharts-tooltip-box apexcharts-tooltip-'.concat(t.config.chart.type, '">') + "<div>".concat(a[0], ': <span class="value">') + r + "</span></div>" + "<div>".concat(a[1], ': <span class="value">') + o + "</span></div>" + (n ? "<div>".concat(a[2], ': <span class="value">') + n + "</span></div>" : "") + "<div>".concat(a[3], ': <span class="value">') + l + "</span></div>" + "<div>".concat(a[4], ': <span class="value">') + h + "</span></div></div>"
+                    return t.config.series[e].type && t.config.series[e].type !== s ? '<div className="apexcharts-custom-tooltip">\n          '.concat(t.config.series[e].name ? t.config.series[e].name : "series-" + (e + 1), ": <strong>").concat(t.globals.series[e][i], "</strong>\n        </div>") : '<div className="apexcharts-tooltip-box apexcharts-tooltip-'.concat(t.config.chart.type, '">') + "<div>".concat(a[0], ': <span className="value">') + r + "</span></div>" + "<div>".concat(a[1], ': <span className="value">') + o + "</span></div>" + (n ? "<div>".concat(a[2], ': <span className="value">') + n + "</span></div>" : "") + "<div>".concat(a[3], ': <span className="value">') + l + "</span></div>" + "<div>".concat(a[4], ': <span className="value">') + h + "</span></div></div>"
                 }
             }]), t
         }(),
@@ -9804,7 +9804,7 @@
                             var t = "<div >",
                                 e = "<div>";
                             d.forEach((function (i, a) {
-                                t += ' <div style="display: flex"><span class="apexcharts-tooltip-marker" style="background-color: '.concat(i.attrs.strokeColor, '; height: 3px; border-radius: 0; top: 5px;"></span> ').concat(i.attrs.name, "</div>"), e += "<div>".concat(i.val, "</div>")
+                                t += ' <div style="display: flex"><span className="apexcharts-tooltip-marker" style="background-color: '.concat(i.attrs.strokeColor, '; height: 3px; border-radius: 0; top: 5px;"></span> ').concat(i.attrs.name, "</div>"), e += "<div>".concat(i.val, "</div>")
                             })), v.innerHTML = t + "</div>", m.innerHTML = e + "</div>"
                         };
                         o ? l.globals.seriesGoals[e][i] && Array.isArray(l.globals.seriesGoals[e][i]) ? y() : (v.innerHTML = "", m.innerHTML = "") : y()
@@ -11529,7 +11529,7 @@
                                 totalItems: t.length - 1,
                                 animBeginArr: this.animBeginArr,
                                 dur: k
-                            }), i.config.plotOptions.pie.expandOnClick && "polarArea" !== this.chartType && b.click(this.pieClicked.bind(this, d)), void 0 !== i.globals.selectedDataPoints[0] && i.globals.selectedDataPoints[0].indexOf(d) > -1 && this.pieClicked(d), i.config.dataLabels.enabled) {
+                            }), i.config.plotOptions.pie.expandonClick && "polarArea" !== this.chartType && b.click(this.pieClicked.bind(this, d)), void 0 !== i.globals.selectedDataPoints[0] && i.globals.selectedDataPoints[0].indexOf(d) > -1 && this.pieClicked(d), i.config.dataLabels.enabled) {
                             var A = w.x,
                                 S = w.y,
                                 C = 100 * u / this.fullAngle + "%";
@@ -11625,7 +11625,7 @@
                 value: function (t) {
                     var e, i = this.w,
                         a = this,
-                        s = a.sliceSizes[t] + (i.config.plotOptions.pie.expandOnClick ? 4 : 0),
+                        s = a.sliceSizes[t] + (i.config.plotOptions.pie.expandonClick ? 4 : 0),
                         r = i.globals.dom.Paper.select(".apexcharts-".concat(a.chartType.toLowerCase(), "-slice-").concat(t)).members[0];
                     if ("true" !== r.attr("data:pieClicked")) {
                         var o = i.globals.dom.baseEl.getElementsByClassName("apexcharts-pie-area");
