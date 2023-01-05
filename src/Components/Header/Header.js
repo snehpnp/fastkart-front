@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate, useLocation } from 'react-router-dom';
-
+import Swal from 'sweetalert2'
 
 import unitedstates from '../../assets/images/country/united-states.png'
 
@@ -22,20 +22,34 @@ function Header() {
         navigate('/shop');
     }
     const productClick = () => {
-        navigate('/product');
+        // navigate('/product');
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'WORK IS PANDDING!',
+          //   footer: '<a href="">Why do I have this issue?</a>'
+          })
     }
     const megamenuClick = () => {
-        navigate('/megamenu');
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'WORK IS PANDDING!',
+          //   footer: '<a href="">Why do I have this issue?</a>'
+          })
     }
-    const blogsClick = () => {
-        navigate('/blog');
-    }
+
     const pagesClick = () => {
-        navigate('/pages');
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'WORK IS PANDDING!',
+          //   footer: '<a href="">Why do I have this issue?</a>'
+          })
     }
-    const sellerClick = () => {
-        navigate('/seller');
-    }
+    // const sellerClick = () => {
+    //     navigate('/seller');
+    // }
     const loginClick = () => {
         navigate('/login');
     }
@@ -77,7 +91,14 @@ function Header() {
     }
 
 
-
+    const pandding = () => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'WORK IS PANDDING!',
+        //   footer: '<a href="">Why do I have this issue?</a>'
+        })
+      }
 
     return (
         <>
@@ -204,12 +225,11 @@ function Header() {
                                             <li className="right-side">
                                                 <a onClick={ContactClick} className="delivery-login-box">
                                                     <div className="delivery-icon">
-                                                        <i className="fa-solid fa-phone-volume"></i>
+                                                    
+                                                    <i class="fa-regular fa-phone-volume fa-lg"  style={{"color":"black"}}></i>
+                                                   
                                                     </div>
-                                                    {/* <div className="delivery-detail">
-                                                        <h6>24/7 Delivery</h6>
-                                                        <h5>+91 888 104 2340</h5>
-                                                    </div> */}
+                                                 
                                                 </a>
                                             </li>
                                             <li className="right-side">
@@ -316,7 +336,7 @@ function Header() {
                                 <div className="header-nav-left">
                                     <button className="dropdown-category">
                                         <i className="fa-solid fa-list"></i>
-                                        <span style={{ "paddingLeft": "10px" }}> All Categories</span>
+                                        <span style={{ "paddingLeft": "10px" }} onClick={()=>pandding()}> All Categories</span>
                                     </button>
                                     <div className="category-dropdown">
                                         <div className="category-title">
@@ -345,38 +365,11 @@ function Header() {
                                                     <li className="nav-item dropdown">
                                                         <a className="nav-link dropdown-toggle" onClick={shopClick} data-bs-toggle="dropdown">
                                                             <i className="fa-thin fa-shop" />Shop</a>
-                                                        <ul className="dropdown-menu">
-                                                            <li>
-                                                                <a className="dropdown-item" href="shop-category-slider.html">Shop
-                                                                    Category Slider</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="shop-category.html">Shop
-                                                                    Category Sidebar</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="shop-banner.html">Shop Banner</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="shop-left-sidebar.html">Shop Left
-                                                                    Sidebar</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="shop-list.html">Shop List</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="shop-right-sidebar.html">Shop
-                                                                    Right Sidebar</a>
-                                                            </li>
-                                                            <li>
-                                                                <a className="dropdown-item" href="shop-top-filter.html">Shop Top
-                                                                    Filter</a>
-                                                            </li>
-                                                        </ul>
+                                                    
                                                     </li>
                                                     <li className="nav-item dropdown">
                                                         <a className="nav-link dropdown-toggle" onClick={productClick} data-bs-toggle="dropdown">Product</a>
-                                                        <ul className="dropdown-menu">
+                                                        {/* <ul className="dropdown-menu">
                                                             <li>
                                                                 <a className="dropdown-item" href="product-4-image.html">Product
                                                                     4 Image</a>
@@ -410,7 +403,7 @@ function Header() {
                                                                 <a href="product-sticky.html" className="dropdown-item">Product
                                                                     Sticky</a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> */}
                                                     </li>
                                                     <li className="nav-item dropdown dropdown-mega">
                                                         <a className="nav-link dropdown-toggle ps-xl-2 ps-0" onClick={megamenuClick} data-bs-toggle="dropdown">Mega Menu</a>
@@ -435,7 +428,7 @@ function Header() {
                                                         <a className="nav-link dropdown-toggle" onClick={pagesClick} data-bs-toggle="dropdown">Pages</a>
                                                     </li>
                                                     <li className="nav-item dropdown">
-                                                        <a className="nav-link dropdown-toggle" onClick={sellerClick} data-bs-toggle="dropdown">Seller</a>
+                                                        <a className="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Seller</a>
                                                         <ul className="dropdown-menu">
                                                             <li>
                                                                 <a className="dropdown-item" onClick={becameSellerClick}>Become a

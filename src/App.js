@@ -5,7 +5,7 @@ import $ from "jquery";
 // import './assets/js/slick/slick'
 
 import Header from './Components/Header/Header'
-import Home from './Components/Home/Home'
+// import Home from './Components/Home/Home'
 import Home1 from './Components/Home/Home1';
 
 import Footer from './Components/Footer/Footer'
@@ -17,6 +17,8 @@ import Contack from './Components/Contact/Contack';
 import Wishlist from './Components/Wishlist/Wishlist';
 import Cart from './Components/Cart/Cart';
 import Checkout from './Components/Cart/Checkout';
+import Shop from './Components/Shop/Shop';
+
 
 
 import Blogsdeteails from './Components/Blogs/Blogsdeteails';
@@ -59,6 +61,8 @@ function App() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/shop" element={<Shop />} />
+
 
 
 

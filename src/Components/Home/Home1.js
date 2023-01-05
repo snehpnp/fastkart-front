@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Slider from "react-slick";
+import Swal from 'sweetalert2'
 
 
 import Button from 'react-bootstrap/Button';
@@ -8,10 +9,7 @@ import Modal from 'react-bootstrap/Modal';
 import banner1 from '../../assets/images/vegetable/banner/1.jpg'
 import banner2 from '../../assets/images/vegetable/banner/2.jpg'
 import banner3 from '../../assets/images/vegetable/banner/3.jpg'
-// import banner4 from '../../assets/images/vegetable/banner/4.jpg'
-// import banner5 from '../../assets/images/vegetable/banner/5.jpg'
-// import banner6 from '../../assets/images/vegetable/banner/6.jpg'
-// import banner7 from '../../assets/images/vegetable/banner/7.jpg'
+
 
 import veg1 from '../../assets/images/veg-3/banner/1.png'
 import veg2 from '../../assets/images/veg-3/banner/2.png'
@@ -23,7 +21,6 @@ import home1 from '../../assets/images/veg-3/home/1.png'
 import home2 from '../../assets/images/veg-3/home/2.png'
 import home3 from '../../assets/images/veg-3/home/3.png'
 import home4 from '../../assets/images/veg-3/home/4.png'
-// import home5 from '../../assets/images/veg-3/home/5.png'
 
 import category1 from '../../assets/images/veg-3/category/1.png'
 import category2 from '../../assets/images/veg-3/category/2.png'
@@ -121,7 +118,7 @@ function Home1() {
       } else if (numbersToAddZeroTo.includes(seconds)) {
         seconds = `0${seconds}`;
       }
-// console.log(" days: days, hours: hours, minutes, seconds", {days: days, hours: hours, minutes, seconds});
+      // console.log(" days: days, hours: hours, minutes, seconds", {days: days, hours: hours, minutes, seconds});
       setState({ days: days, hours: hours, minutes, seconds });
     }
   };
@@ -152,8 +149,8 @@ function Home1() {
     autoplaySpeed: 2000,
     draggable: false,
     dots: false,
-    useCSS: true
-
+    useCSS: true,
+    arrows: true,
   };
   const settings2 = {
     infinite: true,
@@ -203,6 +200,17 @@ function Home1() {
     slidesPerRow: 1,
     useCSS: true
   };
+
+
+  const pandding = () => {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href="">Why do I have this issue?</a>'
+    })
+  }
+
 
 
 
@@ -512,7 +520,7 @@ function Home1() {
                           <h4 className="item">Sold: <span>30 Items</span></h4>
                           <h4 className="offer">Hurry up offer end in</h4>
                           <div className="timer" id="clockdiv-4" data-hours={1} data-minutes={2} data-seconds={3}>
-                          <ul>
+                            <ul>
                               <li>
                                 <div className="counter">
                                   <div className="days">
@@ -586,7 +594,7 @@ function Home1() {
                           <h4 className="item">Sold: <span>30 Items</span></h4>
                           <h4 className="offer">Hurry up offer end in</h4>
                           <div className="timer" id="clockdiv-1" data-hours={1} data-minutes={2} data-seconds={3}>
-                          <ul>
+                            <ul>
                               <li>
                                 <div className="counter">
                                   <div className="days">
@@ -734,7 +742,7 @@ function Home1() {
                           <h4 className="item">Sold: <span>30 Items</span></h4>
                           <h4 className="offer">Hurry up offer end in</h4>
                           <div className="timer" id="clockdiv-3" data-hours={1} data-minutes={2} data-seconds={3}>
-                          <ul>
+                            <ul>
                               <li>
                                 <div className="counter">
                                   <div className="days">
@@ -815,7 +823,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye" onClick={handleShow} /> 
+                            <i className="fa-solid fa-eye" onClick={handleShow} />
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -6652,98 +6660,98 @@ function Home1() {
 
 
 
-      <Modal show={show} onHide={handleClose}   dialogClassName="modal-xl">
+      <Modal show={show} onHide={handleClose} dialogClassName="modal-xl">
         {/* <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header> */}
         <Modal.Body>
 
-    
 
-        <div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" width="auto  ">
-  <div className="modal-content">
-    <div className="modal-header">
-      <h5 className="modal-title" id="exampleModalLabel">Choose your Delivery Location</h5>
-      <p className="mt-1 text-content">Enter your address and we will specify the offer for your area.</p>
-      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">
-        <i className="fa-solid fa-xmark" />
-      </button>
-    </div>
-    <div className="modal-body">
-      <div className="location-list">
-        <div className="search-input">
-          <input type="search" className="form-control" placeholder="Search Your Area" />
-          <i className="fa-solid fa-magnifying-glass" />
-        </div>
-        <div className="disabled-box">
-          <h6>Select a Location</h6>
-        </div>
-        <ul className="location-select custom-height">
-          <li>
-            <a href="javascript:void(0)">
-              <h6>Alabama</h6>
-              <span>Min: $130</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h6>Arizona</h6>
-              <span>Min: $150</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h6>California</h6>
-              <span>Min: $110</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h6>Colorado</h6>
-              <span>Min: $140</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h6>Florida</h6>
-              <span>Min: $160</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h6>Georgia</h6>
-              <span>Min: $120</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h6>Kansas</h6>
-              <span>Min: $170</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h6>Minnesota</h6>
-              <span>Min: $120</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h6>New York</h6>
-              <span>Min: $110</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h6>Washington</h6>
-              <span>Min: $130</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+
+          <div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" width="auto  ">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">Choose your Delivery Location</h5>
+                <p className="mt-1 text-content">Enter your address and we will specify the offer for your area.</p>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  <i className="fa-solid fa-xmark" />
+                </button>
+              </div>
+              <div className="modal-body">
+                <div className="location-list">
+                  <div className="search-input">
+                    <input type="search" className="form-control" placeholder="Search Your Area" />
+                    <i className="fa-solid fa-magnifying-glass" />
+                  </div>
+                  <div className="disabled-box">
+                    <h6>Select a Location</h6>
+                  </div>
+                  <ul className="location-select custom-height">
+                    <li>
+                      <a href="javascript:void(0)">
+                        <h6>Alabama</h6>
+                        <span>Min: $130</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <h6>Arizona</h6>
+                        <span>Min: $150</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <h6>California</h6>
+                        <span>Min: $110</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <h6>Colorado</h6>
+                        <span>Min: $140</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <h6>Florida</h6>
+                        <span>Min: $160</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <h6>Georgia</h6>
+                        <span>Min: $120</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <h6>Kansas</h6>
+                        <span>Min: $170</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <h6>Minnesota</h6>
+                        <span>Min: $120</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <h6>New York</h6>
+                        <span>Min: $110</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <h6>Washington</h6>
+                        <span>Min: $130</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
 
