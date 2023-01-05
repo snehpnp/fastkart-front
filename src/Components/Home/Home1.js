@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
-import { Helmet } from "react-helmet";
+import React, { useState, useEffect } from 'react'
 import Slider from "react-slick";
-// import "~slick-carousel/slick/slick.css"; 
-// import "~slick-carousel/slick/slick-theme.css";
+
+
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 import banner1 from '../../assets/images/vegetable/banner/1.jpg'
 import banner2 from '../../assets/images/vegetable/banner/2.jpg'
@@ -76,8 +77,54 @@ import pro12 from '../../assets/images/veg-3/pro1/12.png'
 
 
 function Home1() {
+  const [countdownDate, setCountdownDate] = useState(new Date('01/10/2023').getTime());
+  const [state, setState] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+  const [show, setShow] = useState(false);
 
-  // script.src = "../../assets/js/slick/custom_slick.js";
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+
+
+  useEffect(() => {
+    setInterval(() => setNewTime(), 1000);
+  }, []);
+
+  const setNewTime = () => {
+    if (countdownDate) {
+      const currentTime = new Date().getTime();
+
+      const distanceToDate = countdownDate - currentTime;
+
+      let days = Math.floor(distanceToDate / (1000 * 60 * 60 * 24));
+      let hours = Math.floor(
+        (distanceToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      let minutes = Math.floor(
+        (distanceToDate % (1000 * 60 * 60)) / (1000 * 60),
+      );
+      let seconds = Math.floor((distanceToDate % (1000 * 60)) / 1000);
+
+      const numbersToAddZeroTo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      days = `${days}`;
+      if (numbersToAddZeroTo.includes(hours)) {
+        hours = `0${hours}`;
+      } else if (numbersToAddZeroTo.includes(minutes)) {
+        minutes = `0${minutes}`;
+      } else if (numbersToAddZeroTo.includes(seconds)) {
+        seconds = `0${seconds}`;
+      }
+// console.log(" days: days, hours: hours, minutes, seconds", {days: days, hours: hours, minutes, seconds});
+      setState({ days: days, hours: hours, minutes, seconds });
+    }
+  };
 
 
 
@@ -91,7 +138,8 @@ function Home1() {
     autoplaySpeed: 2000,
     draggable: false,
     dots: false,
-    useCSS: true
+    useCSS: true,
+    arrows: true
 
   };
 
@@ -438,20 +486,21 @@ function Home1() {
                           </div>
                           <ul className="rating">
                             <li>
-                              <i className="fa-sharp fa-solid fa-star"></i>
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i className="fa-sharp fa-solid fa-star"></i>
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i className="fa-sharp fa-solid fa-star"></i>
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i className="fa-sharp fa-solid fa-star"></i>
+                              <span class="fa fa-star "></span>
                             </li>
                             <li>
-                              <i className="fa-sharp fa-solid fa-star"></i>
+                              <span class="fa fa-star "></span>
                             </li>
+
                           </ul>
                           <a href="shop-left-sidebar.html" className="text-title">
                             <h5>Bell pepper</h5>
@@ -463,32 +512,32 @@ function Home1() {
                           <h4 className="item">Sold: <span>30 Items</span></h4>
                           <h4 className="offer">Hurry up offer end in</h4>
                           <div className="timer" id="clockdiv-4" data-hours={1} data-minutes={2} data-seconds={3}>
-                            <ul>
+                          <ul>
                               <li>
                                 <div className="counter">
                                   <div className="days">
-                                    <h6 />{ }
+                                    <h6>{state.days || '0'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="hours">
-                                    <h6 />
+                                    <h6 >{state.hours || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="minutes">
-                                    <h6 />
+                                    <h6>{state.minutes || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="seconds">
-                                    <h6 />
+                                    <h6 >{state.seconds || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
@@ -511,20 +560,21 @@ function Home1() {
                           </div>
                           <ul className="rating">
                             <li>
-                              <i data-feather="star" className="fill" />
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i data-feather="star" className="fill" />
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i data-feather="star" />
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i data-feather="star" />
+                              <span class="fa fa-star "></span>
                             </li>
                             <li>
-                              <i data-feather="star" />
+                              <span class="fa fa-star "></span>
                             </li>
+
                           </ul>
                           <a href="shop-left-sidebar.html" className="text-title">
                             <h5>Eggplant</h5>
@@ -536,32 +586,32 @@ function Home1() {
                           <h4 className="item">Sold: <span>30 Items</span></h4>
                           <h4 className="offer">Hurry up offer end in</h4>
                           <div className="timer" id="clockdiv-1" data-hours={1} data-minutes={2} data-seconds={3}>
-                            <ul>
+                          <ul>
                               <li>
                                 <div className="counter">
                                   <div className="days">
-                                    <h6 />
+                                    <h6>{state.days || '0'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="hours">
-                                    <h6 />
+                                    <h6 >{state.hours || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="minutes">
-                                    <h6 />
+                                    <h6>{state.minutes || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="seconds">
-                                    <h6 />
+                                    <h6 >{state.seconds || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
@@ -570,7 +620,7 @@ function Home1() {
                         </div>
                       </div>
                     </div>
-                    {/* <div>
+                    <div>
                       <div className="deal-box wow fadeInUp" data-wow-delay="0.1s">
                         <a href="shop-left-sidebar.html" className="category-image order-sm-2">
                           <img src={cate3} className="img-fluid  lazyload" alt />
@@ -584,20 +634,21 @@ function Home1() {
                           </div>
                           <ul className="rating">
                             <li>
-                              <i data-feather="star" className="fill" />
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i data-feather="star" className="fill" />
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i data-feather="star" />
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i data-feather="star" />
+                              <span class="fa fa-star "></span>
                             </li>
                             <li>
-                              <i data-feather="star" />
+                              <span class="fa fa-star "></span>
                             </li>
+
                           </ul>
                           <a href="shop-left-sidebar.html" className="text-title">
                             <h5>Onion</h5>
@@ -613,28 +664,28 @@ function Home1() {
                               <li>
                                 <div className="counter">
                                   <div className="days">
-                                    <h6 />
+                                    <h6>{state.days || '0'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="hours">
-                                    <h6 />
+                                    <h6 >{state.hours || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="minutes">
-                                    <h6 />
+                                    <h6>{state.minutes || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="seconds">
-                                    <h6 />
+                                    <h6 >{state.seconds || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
@@ -642,8 +693,8 @@ function Home1() {
                           </div>
                         </div>
                       </div>
-                    </div> */}
-                    {/* <div>
+                    </div>
+                    <div>
                       <div className="deal-box wow fadeInUp" data-wow-delay="0.15s">
                         <div className="category-image order-sm-2">
                           <img src={cate1} className="img-fluid" alt />
@@ -657,20 +708,21 @@ function Home1() {
                           </div>
                           <ul className="rating">
                             <li>
-                              <i data-feather="star" className="fill" />
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i data-feather="star" className="fill" />
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i data-feather="star" />
+                              <span class="fa fa-star checked21"></span>
                             </li>
                             <li>
-                              <i data-feather="star" />
+                              <span class="fa fa-star "></span>
                             </li>
                             <li>
-                              <i data-feather="star" />
+                              <span class="fa fa-star "></span>
                             </li>
+
                           </ul>
                           <a href="shop-left-sidebar.html" className="text-title">
                             <h5>Bell pepper</h5>
@@ -682,32 +734,32 @@ function Home1() {
                           <h4 className="item">Sold: <span>30 Items</span></h4>
                           <h4 className="offer">Hurry up offer end in</h4>
                           <div className="timer" id="clockdiv-3" data-hours={1} data-minutes={2} data-seconds={3}>
-                            <ul>
+                          <ul>
                               <li>
                                 <div className="counter">
                                   <div className="days">
-                                    <h6 />
+                                    <h6>{state.days || '0'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="hours">
-                                    <h6 />
+                                    <h6 >{state.hours || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="minutes">
-                                    <h6 />
+                                    <h6>{state.minutes || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
                               <li>
                                 <div className="counter">
                                   <div className="seconds">
-                                    <h6 />
+                                    <h6 >{state.seconds || '00'}</h6>
                                   </div>
                                 </div>
                               </li>
@@ -715,7 +767,7 @@ function Home1() {
                           </div>
                         </div>
                       </div>
-                    </div> */}
+                    </div>
                   </Slider>
                 </div>
               </div>
@@ -763,7 +815,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow} /> 
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -776,20 +828,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Bell pepper</h5>
@@ -828,7 +881,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -841,20 +894,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Potato</h5>
@@ -896,7 +950,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -909,20 +963,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Baby Chili</h5>
@@ -961,7 +1016,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -974,20 +1029,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Broccoli</h5>
@@ -1029,7 +1085,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1042,20 +1098,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Peru</h5>
@@ -1094,7 +1151,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1107,20 +1164,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Avacado</h5>
@@ -1159,7 +1217,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1172,20 +1230,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Cucumber</h5>
@@ -1227,7 +1286,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1240,20 +1299,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Beetroot</h5>
@@ -1292,7 +1352,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1305,20 +1365,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Strawberry</h5>
@@ -1357,7 +1418,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1370,20 +1431,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Corn</h5>
@@ -1425,7 +1487,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1438,20 +1500,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Cabbage</h5>
@@ -1493,7 +1556,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1506,20 +1569,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Ginger</h5>
@@ -1562,7 +1626,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1575,20 +1639,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Eggplant</h5>
@@ -1627,7 +1692,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1640,20 +1705,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Eggplant</h5>
@@ -1692,7 +1758,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1705,20 +1771,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Onion</h5>
@@ -1757,7 +1824,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1770,20 +1837,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Potato</h5>
@@ -1822,7 +1890,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1835,20 +1903,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Baby Chili</h5>
@@ -1887,7 +1956,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1900,20 +1969,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Broccoli</h5>
@@ -1952,7 +2022,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -1965,20 +2035,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Pea</h5>
@@ -2017,7 +2088,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2030,20 +2101,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Cucumber</h5>
@@ -2082,7 +2154,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2095,20 +2167,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Cabbage</h5>
@@ -2147,7 +2220,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2160,20 +2233,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Ginger</h5>
@@ -2216,7 +2290,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2229,20 +2303,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Apple</h5>
@@ -2281,7 +2356,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2294,20 +2369,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Passion</h5>
@@ -2346,7 +2422,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2359,20 +2435,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Blackberry</h5>
@@ -2411,7 +2488,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2424,20 +2501,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Peru</h5>
@@ -2476,7 +2554,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2489,20 +2567,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Apple</h5>
@@ -2541,7 +2620,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2554,20 +2633,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Strawberry</h5>
@@ -2606,7 +2686,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2619,20 +2699,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Bell pepper</h5>
@@ -2675,7 +2756,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2688,20 +2769,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Eggplant</h5>
@@ -2740,7 +2822,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2753,20 +2835,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Eggplant</h5>
@@ -2805,7 +2888,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2818,20 +2901,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Onion</h5>
@@ -2870,7 +2954,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2883,20 +2967,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Potato</h5>
@@ -2935,7 +3020,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -2948,20 +3033,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Baby Chili</h5>
@@ -3000,7 +3086,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3013,20 +3099,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Broccoli</h5>
@@ -3065,7 +3152,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3078,20 +3165,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Pea</h5>
@@ -3130,7 +3218,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3143,20 +3231,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Cucumber</h5>
@@ -3195,7 +3284,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3208,20 +3297,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Cabbage</h5>
@@ -3260,7 +3350,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3273,20 +3363,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Ginger</h5>
@@ -3329,7 +3420,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3342,20 +3433,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Eggplant</h5>
@@ -3394,7 +3486,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3407,20 +3499,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Eggplant</h5>
@@ -3459,7 +3552,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3472,20 +3565,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Onion</h5>
@@ -3524,7 +3618,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3537,20 +3631,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Potato</h5>
@@ -3589,7 +3684,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3602,20 +3697,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Baby Chili</h5>
@@ -3654,7 +3750,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3667,20 +3763,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Broccoli</h5>
@@ -3719,7 +3816,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3732,20 +3829,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Pea</h5>
@@ -3784,7 +3882,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3797,20 +3895,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Cucumber</h5>
@@ -3849,7 +3948,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3862,20 +3961,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Cabbage</h5>
@@ -3914,7 +4014,7 @@ function Home1() {
                         <ul className="option">
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                            <i className="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                           </li>
                           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -3927,20 +4027,21 @@ function Home1() {
                       <div className="product-detail">
                         <ul className="rating">
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" className="fill" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star checked21"></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
                           <li>
-                            <i data-feather="star" />
+                            <span class="fa fa-star "></span>
                           </li>
+
                         </ul>
                         <a href="product-left-thumbnail.html">
                           <h5 className="name">Ginger</h5>
@@ -4045,19 +4146,19 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                   </ul>
                                   <a href="product-left-thumbnail.html">
@@ -4072,7 +4173,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4097,19 +4198,19 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                   </ul>
                                   <a href="product-left-thumbnail.html">
@@ -4124,7 +4225,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4149,20 +4250,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Carrot</h4>
@@ -4176,7 +4278,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4201,20 +4303,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Carrot</h4>
@@ -4228,7 +4331,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4259,20 +4362,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Potato</h4>
@@ -4286,7 +4390,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4311,20 +4415,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Broccoli</h4>
@@ -4338,7 +4443,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4363,20 +4468,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Carrot</h4>
@@ -4390,7 +4496,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4415,20 +4521,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Carrot</h4>
@@ -4442,7 +4549,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4485,19 +4592,19 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                   </ul>
                                   <a href="product-left-thumbnail.html">
@@ -4512,7 +4619,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4537,19 +4644,19 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                   </ul>
                                   <a href="product-left-thumbnail.html">
@@ -4564,7 +4671,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4589,20 +4696,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Carrot</h4>
@@ -4616,7 +4724,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4641,20 +4749,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Carrot</h4>
@@ -4668,7 +4777,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4699,20 +4808,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Potato</h4>
@@ -4726,7 +4836,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4751,20 +4861,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Broccoli</h4>
@@ -4778,7 +4889,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4803,20 +4914,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Carrot</h4>
@@ -4830,7 +4942,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4855,20 +4967,21 @@ function Home1() {
                                 <div className="product-details">
                                   <ul className="rating">
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star checked21"></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
                                     <li>
-                                      <i data-feather="star" className="fill" />
+                                      <span class="fa fa-star "></span>
                                     </li>
+
                                   </ul>
                                   <a href="product-left-thumbnail.html">
                                     <h4 className="name">Carrot</h4>
@@ -4882,7 +4995,7 @@ function Home1() {
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                      <i className="fa-solid fa-eye"></i>
+                                      <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                     </li>
                                     <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4924,19 +5037,20 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                 </ul>
                                 <a href="product-left-thumbnail.html">
@@ -4951,7 +5065,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -4976,19 +5090,19 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                 </ul>
                                 <a href="product-left-thumbnail.html">
@@ -5003,7 +5117,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5028,20 +5142,21 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
+
                                 </ul>
                                 <a href="product-left-thumbnail.html">
                                   <h4 className="name">Carrot</h4>
@@ -5055,7 +5170,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5084,20 +5199,21 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star "></span>
                                   </li>
+
                                 </ul>
                                 <a href="product-left-thumbnail.html">
                                   <h4 className="name">Potato</h4>
@@ -5111,7 +5227,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5136,20 +5252,21 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star "></span>
                                   </li>
+
                                 </ul>
                                 <a href="product-left-thumbnail.html">
                                   <h4 className="name">Broccoli</h4>
@@ -5163,7 +5280,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5188,20 +5305,21 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star "></span>
                                   </li>
+
                                 </ul>
                                 <a href="product-left-thumbnail.html">
                                   <h4 className="name">Carrot</h4>
@@ -5215,7 +5333,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5255,20 +5373,21 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
+
                                 </ul>
                                 <a href="product-left-thumbnail.html">
                                   <h4 className="name">Garlic</h4>
@@ -5282,7 +5401,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5307,19 +5426,19 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                 </ul>
                                 <a href="product-left-thumbnail.html">
@@ -5334,7 +5453,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5359,19 +5478,19 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                 </ul>
                                 <a href="product-left-thumbnail.html">
@@ -5386,7 +5505,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5415,19 +5534,19 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                 </ul>
                                 <a href="product-left-thumbnail.html">
@@ -5442,7 +5561,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5467,19 +5586,19 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                 </ul>
                                 <a href="product-left-thumbnail.html">
@@ -5494,7 +5613,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5519,20 +5638,21 @@ function Home1() {
                               <div className="product-details">
                                 <ul className="rating">
                                   <li>
-                                    <i data-feather="star" className="fill" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star checked21"></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
                                   <li>
-                                    <i data-feather="star" />
+                                    <span class="fa fa-star "></span>
                                   </li>
+
                                 </ul>
                                 <a href="product-left-thumbnail.html">
                                   <h4 className="name">Avacado</h4>
@@ -5546,7 +5666,7 @@ function Home1() {
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                                    <i className="fa-solid fa-eye"></i>
+                                    <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                                   </li>
                                   <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
@@ -5622,7 +5742,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -5635,19 +5755,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -5688,7 +5808,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -5701,19 +5821,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -5751,7 +5871,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -5764,19 +5884,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -5814,7 +5934,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -5827,19 +5947,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -5881,7 +6001,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -5894,19 +6014,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -5944,7 +6064,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -5957,19 +6077,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -6007,7 +6127,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -6020,19 +6140,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -6070,7 +6190,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -6083,19 +6203,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -6140,7 +6260,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -6153,19 +6273,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -6206,7 +6326,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -6219,19 +6339,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -6269,7 +6389,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -6282,19 +6402,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -6332,7 +6452,7 @@ function Home1() {
                     <ul className="option">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
 
-                        <i className="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye" onClick={handleShow}></i>
 
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -6345,19 +6465,19 @@ function Home1() {
                   <div className="product-detail">
                     <ul className="rating">
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" className="fill" />
+                        <span class="fa fa-star checked21"></span>
                       </li>
                       <li>
-                        <i data-feather="star" />
+                        <span class="fa fa-star "></span>
                       </li>
                     </ul>
                     <a href="product-left-thumbnail.html">
@@ -6494,7 +6614,7 @@ function Home1() {
           <div className="container-fluid-lg">
             <div className="row">
               <div className="col-12">
-                <div className="newsletter-box hover-effect" style={{ "backgroundImage": `url(${background1})`, "backgroundSize": "cover", "backgroundPosition": "center", "backgroundRepeat": "no-repeat", "display": "block" }}>
+                <div className="newsletter-box " style={{ "backgroundImage": `url(${background1})`, "backgroundSize": "cover", "backgroundPosition": "center", "backgroundRepeat": "no-repeat", "display": "block" }}>
                   {/* <img src={background1} className="img-fluid bg-img" alt /> */}
                   <div className="row">
                     <div className="col-xxl-8 col-xl-7">
@@ -6532,7 +6652,112 @@ function Home1() {
 
 
 
+      <Modal show={show} onHide={handleClose}   dialogClassName="modal-xl">
+        {/* <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header> */}
+        <Modal.Body>
 
+    
+
+        <div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" width="auto  ">
+  <div className="modal-content">
+    <div className="modal-header">
+      <h5 className="modal-title" id="exampleModalLabel">Choose your Delivery Location</h5>
+      <p className="mt-1 text-content">Enter your address and we will specify the offer for your area.</p>
+      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        <i className="fa-solid fa-xmark" />
+      </button>
+    </div>
+    <div className="modal-body">
+      <div className="location-list">
+        <div className="search-input">
+          <input type="search" className="form-control" placeholder="Search Your Area" />
+          <i className="fa-solid fa-magnifying-glass" />
+        </div>
+        <div className="disabled-box">
+          <h6>Select a Location</h6>
+        </div>
+        <ul className="location-select custom-height">
+          <li>
+            <a href="javascript:void(0)">
+              <h6>Alabama</h6>
+              <span>Min: $130</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h6>Arizona</h6>
+              <span>Min: $150</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h6>California</h6>
+              <span>Min: $110</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h6>Colorado</h6>
+              <span>Min: $140</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h6>Florida</h6>
+              <span>Min: $160</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h6>Georgia</h6>
+              <span>Min: $120</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h6>Kansas</h6>
+              <span>Min: $170</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h6>Minnesota</h6>
+              <span>Min: $120</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h6>New York</h6>
+              <span>Min: $110</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h6>Washington</h6>
+              <span>Min: $130</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
 
 

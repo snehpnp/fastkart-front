@@ -9,6 +9,8 @@
     "bootstrap": "^5.0.1",
     "jquery": "^3.6.3",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
+    "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.6.1",

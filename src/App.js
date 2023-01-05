@@ -15,6 +15,8 @@ import Forgetpassword from './Components/Login/Forgetpassword';
 import Products from './Components/Products/Products';
 import Contack from './Components/Contact/Contack';
 import Wishlist from './Components/Wishlist/Wishlist';
+import Cart from './Components/Cart/Cart';
+import Checkout from './Components/Cart/Checkout';
 
 
 import Blogsdeteails from './Components/Blogs/Blogsdeteails';
@@ -55,6 +57,10 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/Contact" element={<Contack />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+
+
 
 
 

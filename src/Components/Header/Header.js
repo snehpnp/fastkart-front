@@ -72,6 +72,9 @@ function Header() {
     const sellerGridClick = () => {
         navigate('/seller-grid')
     }
+    const cartClick = ()=>{
+        navigate('/cart')
+    }
 
 
 
@@ -266,8 +269,8 @@ function Header() {
                                                             <h4 className="theme-color fw-bold">$106.58</h4>
                                                         </div>
                                                         <div className="button-group">
-                                                            <a href="cart.html" className="btn btn-sm cart-button">View Cart</a>
-                                                            <a href="checkout.html" className="btn btn-sm cart-button theme-bg-color
+                                                            <a onClick={cartClick} className="btn btn-sm cart-button">View Cart</a>
+                                                            <a href="checkout" className="btn btn-sm cart-button theme-bg-color
                                               text-white">Checkout</a>
                                                         </div>
                                                     </div>

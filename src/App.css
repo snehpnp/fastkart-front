@@ -14,3 +14,10 @@ body::-webkit-scrollbar {
 a{
   text-decoration: none !important;
 }
+
+.checked21 {
+  color: orange;
+}
+.rating{
+padding-left: 0rem;
+}
