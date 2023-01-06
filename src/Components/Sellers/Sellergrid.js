@@ -1,13 +1,26 @@
 import React from 'react'
+import logo1 from "../../assets/images/vendor-page/logo/1.png"
+import logo2 from "../../assets/images/vendor-page/logo/2.png"
+import logo3 from "../../assets/images/vendor-page/logo/3.png"
+import logo4 from "../../assets/images/vendor-page/logo/4.png"
+import logo5 from "../../assets/images/vendor-page/logo/5.png"
+import logo6 from "../../assets/images/vendor-page/logo/6.png"
+import logo7 from "../../assets/images/vendor-page/logo/7.png"
+
+
+import product1 from "../../assets/images/vegetable/product/1.png"
+import product2 from "../../assets/images/vegetable/product/2.png"
+import product3 from "../../assets/images/vegetable/product/3.png"
+import product4 from "../../assets/images/vegetable/product/4.png"
+
 
 function Sellergrid() {
     return (
 
 
         <>
-
             <div>
-                <section className="breadscrumb-section pt-0">
+                {/* <section className="breadscrumb-section pt-0">
                     <div className="container-fluid-lg">
                         <div className="row">
                             <div className="col-12">
@@ -27,7 +40,7 @@ function Sellergrid() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 {/* Breadcrumb Section End */}
                 {/* Grid Section Start */}
                 <section className="seller-grid-section">
@@ -37,7 +50,7 @@ function Sellergrid() {
                                 <div className="seller-grid-box seller-grid-box-1">
                                     <div className="grid-image">
                                         <div className="image">
-                                            <img src="../assets/images/vendor-page/logo/1.png" className="img-fluid" alt />
+                                            <img src={logo1} className="img-fluid" alt />
                                         </div>
                                         <div className="contain-name">
                                             <div>
@@ -92,19 +105,19 @@ function Sellergrid() {
                                             <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
+                                                    <img src={product1} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/3.png" className="img-fluid" alt />
+                                                    <img src={product2} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/9.png" className="img-fluid" alt />
+                                                    <img src={product4} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>+63</li>
                                             </ul>
@@ -116,7 +129,7 @@ function Sellergrid() {
                                 <div className="seller-grid-box seller-grid-box-1">
                                     <div className="grid-image">
                                         <div className="image">
-                                            <img src="../assets/images/vendor-page/logo/2.png" className="img-fluid" alt />
+                                            <img src={logo2} className="img-fluid" alt />
                                         </div>
                                         <div className="contain-name">
                                             <div>
@@ -171,19 +184,19 @@ function Sellergrid() {
                                             <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
+                                                    <img src={product1} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/3.png" className="img-fluid" alt />
+                                                    <img src={product2} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/9.png" className="img-fluid" alt />
+                                                    <img src={product4} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>+63</li>
                                             </ul>
@@ -195,7 +208,7 @@ function Sellergrid() {
                                 <div className="seller-grid-box seller-grid-box-1">
                                     <div className="grid-image">
                                         <div className="image">
-                                            <img src="../assets/images/vendor-page/logo/3.png" className="img-fluid" alt />
+                                            <img src={logo3} className="img-fluid" alt />
                                         </div>
                                         <div className="contain-name">
                                             <div>
@@ -250,19 +263,19 @@ function Sellergrid() {
                                             <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
+                                                    <img src={product1} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/3.png" className="img-fluid" alt />
+                                                    <img src={product2} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/9.png" className="img-fluid" alt />
+                                                    <img src={product4} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>+63</li>
                                             </ul>
@@ -274,7 +287,7 @@ function Sellergrid() {
                                 <div className="seller-grid-box seller-grid-box-1">
                                     <div className="grid-image">
                                         <div className="image">
-                                            <img src="../assets/images/vendor-page/logo/4.png" className="img-fluid" alt />
+                                            <img src={logo4} className="img-fluid" alt />
                                         </div>
                                         <div className="contain-name">
                                             <div>
@@ -329,19 +342,19 @@ function Sellergrid() {
                                             <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
+                                                    <img src={product1} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/3.png" className="img-fluid" alt />
+                                                    <img src={product2} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/9.png" className="img-fluid" alt />
+                                                    <img src={product4} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>+63</li>
                                             </ul>
@@ -353,7 +366,7 @@ function Sellergrid() {
                                 <div className="seller-grid-box seller-grid-box-1">
                                     <div className="grid-image">
                                         <div className="image">
-                                            <img src="../assets/images/vendor-page/logo/5.png" className="img-fluid" alt />
+                                            <img src={logo5} className="img-fluid" alt />
                                         </div>
                                         <div className="contain-name">
                                             <div>
@@ -408,19 +421,19 @@ function Sellergrid() {
                                             <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
+                                                    <img src={product1} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/3.png" className="img-fluid" alt />
+                                                    <img src={product2} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/9.png" className="img-fluid" alt />
+                                                    <img src={product4} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>+63</li>
                                             </ul>
@@ -432,7 +445,7 @@ function Sellergrid() {
                                 <div className="seller-grid-box seller-grid-box-1">
                                     <div className="grid-image">
                                         <div className="image">
-                                            <img src="../assets/images/vendor-page/logo/6.png" className="img-fluid" alt />
+                                            <img src={logo6} className="img-fluid" alt />
                                         </div>
                                         <div className="contain-name">
                                             <div>
@@ -487,19 +500,19 @@ function Sellergrid() {
                                             <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
+                                                    <img src={product1} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/3.png" className="img-fluid" alt />
+                                                    <img src={product2} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/9.png" className="img-fluid" alt />
+                                                    <img src={product4} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>+63</li>
                                             </ul>
@@ -511,7 +524,7 @@ function Sellergrid() {
                                 <div className="seller-grid-box seller-grid-box-1">
                                     <div className="grid-image">
                                         <div className="image">
-                                            <img src="../assets/images/vendor-page/logo/7.png" className="img-fluid" alt />
+                                            <img src={logo7} className="img-fluid" alt />
                                         </div>
                                         <div className="contain-name">
                                             <div>
@@ -566,19 +579,19 @@ function Sellergrid() {
                                             <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
+                                                    <img src={product1} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/3.png" className="img-fluid" alt />
+                                                    <img src={product2} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/9.png" className="img-fluid" alt />
+                                                    <img src={product4} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>+63</li>
                                             </ul>
@@ -590,7 +603,7 @@ function Sellergrid() {
                                 <div className="seller-grid-box seller-grid-box-1">
                                     <div className="grid-image">
                                         <div className="image">
-                                            <img src="../assets/images/vendor-page/logo/1.png" className="img-fluid" alt />
+                                            <img src={logo1} className="img-fluid" alt />
                                         </div>
                                         <div className="contain-name">
                                             <div>
@@ -645,19 +658,19 @@ function Sellergrid() {
                                             <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
+                                                    <img src={product1} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/3.png" className="img-fluid" alt />
+                                                    <img src={product2} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/9.png" className="img-fluid" alt />
+                                                    <img src={product4} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>+63</li>
                                             </ul>
@@ -669,7 +682,7 @@ function Sellergrid() {
                                 <div className="seller-grid-box seller-grid-box-1">
                                     <div className="grid-image">
                                         <div className="image">
-                                            <img src="../assets/images/vendor-page/logo/2.png" className="img-fluid" alt />
+                                            <img src={logo2} className="img-fluid" alt />
                                         </div>
                                         <div className="contain-name">
                                             <div>
@@ -724,19 +737,19 @@ function Sellergrid() {
                                             <button onClick="location.href = 'shop-left-sidebar.html';" className="btn btn-sm theme-bg-color text-white fw-bold">Visit Store <i className="fa-solid fa-arrow-right-long ms-2" /></button>
                                             <ul className="product-image">
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/6.png" className="img-fluid" alt />
+                                                    <img src={product1} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/3.png" className="img-fluid" alt />
+                                                    <img src={product2} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/9.png" className="img-fluid" alt />
+                                                    <img src={product4} className="img-fluid" alt />
                                                 </li>
                                                 <li>
-                                                    <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                    <img src={product3} className="img-fluid" alt />
                                                 </li>
                                                 <li>+63</li>
                                             </ul>

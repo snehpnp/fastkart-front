@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../../assets/images/vendor-page/logo.png'
 
 function Sellerdetails() {
   return (
@@ -9,7 +10,7 @@ function Sellerdetails() {
     
     
    <div>
-  <section className="vendore-breadscrumb-section">
+  {/* <section className="vendore-breadscrumb-section">
     <div className="container-fluid-lg">
       <div className="row">
         <div className="col-12">
@@ -26,7 +27,8 @@ function Sellerdetails() {
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
+
   {/* Breadcrumb Section End */}
   {/* Shop Section Start */}
   <section className="section-b-space shop-section">
@@ -41,7 +43,7 @@ function Sellerdetails() {
               <div className="vendor-detail-box">
                 <div className="vendor-name vendor-bottom">
                   <div className="vendor-logo">
-                    <img src="../assets/images/vendor-page/logo.png" alt />
+                    <img src={logo} alt />
                     <div>
                       <h3>Grocery Store</h3>
                       <div className="product-rating vendor-rating">
@@ -750,18 +752,18 @@ function Sellerdetails() {
                   <ul>
                     <li className="three-grid d-xxl-inline-block d-none">
                       <a href="javascript:void(0)">
-                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/grid-3.svg" className="blur-up lazyload" alt />
+                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/grid-3.svg" className=" lazyload" alt />
                       </a>
                     </li>
                     <li className="grid-btn active">
                       <a href="javascript:void(0)">
-                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/grid-4.svg" className="blur-up lazyload d-lg-inline-block d-none" alt />
-                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/grid.svg" className="blur-up lazyload img-fluid d-lg-none d-inline-block" alt />
+                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/grid-4.svg" className=" lazyload d-lg-inline-block d-none" alt />
+                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/grid.svg" className=" lazyload img-fluid d-lg-none d-inline-block" alt />
                       </a>
                     </li>
                     <li className="list-btn">
                       <a href="javascript:void(0)">
-                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/list.svg" className="blur-up lazyload" alt />
+                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/list.svg" className=" lazyload" alt />
                       </a>
                     </li>
                   </ul>
@@ -774,7 +776,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/2.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/2.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -856,7 +858,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/3.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/3.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -938,7 +940,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/4.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/4.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1022,7 +1024,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/5.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/5.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1104,7 +1106,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/6.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/6.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1187,7 +1189,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/7.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/7.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1269,7 +1271,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/2.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/2.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1351,7 +1353,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/3.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/3.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1432,7 +1434,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/4.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/4.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1516,7 +1518,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/5.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/5.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1599,7 +1601,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/6.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/6.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1679,7 +1681,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/7.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/7.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1761,7 +1763,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/2.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/2.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
@@ -1842,7 +1844,7 @@ function Sellerdetails() {
                   <div className="product-header">
                     <div className="product-image">
                       <a href="product-left-thumbnail.html">
-                        <img src="../assets/images/cake/product/3.png" className="img-fluid blur-up lazyload" alt />
+                        <img src="../assets/images/cake/product/3.png" className="img-fluid  lazyload" alt />
                       </a>
                       <ul className="product-option">
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">

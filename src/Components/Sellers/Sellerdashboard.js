@@ -1,9 +1,18 @@
 import React from 'react'
 
+import coverImg1 from '../../assets/images/inner-page/cover-img.jpg'
+import logo1 from '../../assets/images/vendor-page/logo.png'
+
+import product1 from "../../assets/images/vegetable/product/1.png"
+import product2 from "../../assets/images/vegetable/product/2.png"
+import product3 from "../../assets/images/vegetable/product/3.png"
+import product4 from "../../assets/images/vegetable/product/4.png"
+
+
 function Sellerdashboard() {
     return (
         <>
-
+{/* 
             <section className="breadscrumb-section pt-0">
                 <div className="container-fluid-lg">
                     <div className="row">
@@ -24,11 +33,7 @@ function Sellerdashboard() {
                         </div>
                     </div>
                 </div>
-            </section>
-
-
-
-
+            </section> */}
 
             <section className="user-dashboard-section section-b-space">
                 <div className="container-fluid-lg">
@@ -42,12 +47,12 @@ function Sellerdashboard() {
                                 </div>
                                 <div className="profile-box">
                                     <div className="cover-image">
-                                        <img src="../assets/images/inner-page/cover-img.jpg" className="img-fluid blur-up lazyload" alt />
+                                        <img src={coverImg1} className="img-fluid  lazyload" alt />
                                     </div>
                                     <div className="profile-contain">
                                         <div className="profile-image">
                                             <div className="position-relative">
-                                                <img src="../assets/images/vendor-page/logo.png" className="blur-up lazyload update_img" alt />
+                                                <img src={logo1} className=" lazyload update_img" alt />
                                             </div>
                                         </div>
                                         <div className="profile-name">
@@ -107,8 +112,8 @@ function Sellerdashboard() {
                                                 <div className="row g-sm-4 g-3">
                                                     <div className="col-xxl-4 col-lg-6 col-md-4 col-sm-6">
                                                         <div className="totle-contain">
-                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/order.svg" className="img-1 blur-up lazyload" alt />
-                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/order.svg" className="blur-up lazyload" alt />
+                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/order.svg" className="img-1  lazyload" alt />
+                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/order.svg" className=" lazyload" alt />
                                                             <div className="totle-detail">
                                                                 <h5>Total Products</h5>
                                                                 <h3>25</h3>
@@ -117,8 +122,8 @@ function Sellerdashboard() {
                                                     </div>
                                                     <div className="col-xxl-4 col-lg-6 col-md-4 col-sm-6">
                                                         <div className="totle-contain">
-                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/pending.svg" className="img-1 blur-up lazyload" alt />
-                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/pending.svg" className="blur-up lazyload" alt />
+                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/pending.svg" className="img-1  lazyload" alt />
+                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/pending.svg" className=" lazyload" alt />
                                                             <div className="totle-detail">
                                                                 <h5>Total Sales</h5>
                                                                 <h3>12550</h3>
@@ -127,8 +132,8 @@ function Sellerdashboard() {
                                                     </div>
                                                     <div className="col-xxl-4 col-lg-6 col-md-4 col-sm-6">
                                                         <div className="totle-contain">
-                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/wishlist.svg" className="img-1 blur-up lazyload" alt />
-                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/wishlist.svg" className="blur-up lazyload" alt />
+                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/wishlist.svg" className="img-1  lazyload" alt />
+                                                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/svg/wishlist.svg" className=" lazyload" alt />
                                                             <div className="totle-detail">
                                                                 <h5>Order Pending</h5>
                                                                 <h3>36</h3>
@@ -165,7 +170,7 @@ function Sellerdashboard() {
                                                             <tbody>
                                                                 <tr>
                                                                     <td className="product-image">
-                                                                        <img src="../assets/images/vegetable/product/1.png" className="img-fluid" alt />
+                                                                        <img src={product1} className="img-fluid" alt />
                                                                     </td>
                                                                     <td>
                                                                         <h6>Fantasy Crunchy Choco Chip Cookies</h6>
@@ -179,7 +184,7 @@ function Sellerdashboard() {
                                                                 </tr>
                                                                 <tr>
                                                                     <td className="product-image">
-                                                                        <img src="../assets/images/vegetable/product/2.png" className="img-fluid" alt />
+                                                                        <img src={product2} className="img-fluid" alt />
                                                                     </td>
                                                                     <td>
                                                                         <h6>Peanut Butter Bite Premium Butter Cookies 600 g</h6>
@@ -193,7 +198,7 @@ function Sellerdashboard() {
                                                                 </tr>
                                                                 <tr>
                                                                     <td className="product-image">
-                                                                        <img src="../assets/images/vegetable/product/3.png" className="img-fluid" alt />
+                                                                        <img src={product3} className="img-fluid" alt />
                                                                     </td>
                                                                     <td>
                                                                         <h6>Yumitos Chilli Sprinkled Potato Chips 100 g</h6>
@@ -207,7 +212,7 @@ function Sellerdashboard() {
                                                                 </tr>
                                                                 <tr>
                                                                     <td className="product-image">
-                                                                        <img src="../assets/images/vegetable/product/4.png" className="img-fluid" alt />
+                                                                        <img src={product4} className="img-fluid" alt />
                                                                     </td>
                                                                     <td>
                                                                         <h6>healthy Long Life Toned Milk 1 L</h6>
